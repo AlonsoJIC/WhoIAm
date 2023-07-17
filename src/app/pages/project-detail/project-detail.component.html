@@ -1,0 +1,37 @@
+<div class="container mt-1">
+  <div class="row" *ngIf="project">
+    <div class="col col-sm-12 col-md-12 col-lg-12" id="project-details">
+      <h1 class="project-title m-3">{{ project.title }}</h1>
+
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-inner">
+          <ng-container *ngFor="let image of project.images; let i = index">
+            <div class="carousel-item" [class.active]="image === selectedImage">
+              <img [src]="image" alt="...">
+            </div>
+          </ng-container>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="row" *ngIf="project && project.images && project.images.length > 1"> <!-- VERIFICA SI TIENE ITEMS EL ARRAY PARA MOSTRARSE O NO -->
+          <div class="image-thumbnails ">
+            <img *ngFor="let image of project.images" [src]="image" alt="Thumbnail" (click)="setSelectedImage(image)"
+              [class.selected]="image === selectedImage">
+          </div>
+        </div>
+      </div>
+
+      <p class="product-description mt-3">{{ project.description }}</p>
+
+    </div>
+  </div>
+</div>

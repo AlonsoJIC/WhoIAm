@@ -1,0 +1,58 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.error{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.neon {
+  font-family: 'Pacifico', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #fc45de;
+  text-shadow:
+     1px 5px 4px rgba(0,0,0,.3),
+    0 0 2px rgba(255,255,255,1),
+    0 0 10px rgba(255,255,255,1),
+    0 0 20px rgba(255,255,255,1),
+    0 0 30px rgba(255,255,255,1),
+    0 0 40px #ff00de,
+    0 0 70px #ff00de,
+    0 0 80px #ff00de,
+    0 0 100px #ff00de;
+  font-size:200px;
+  animation: Flash 1s infinite;
+}
+.neon span {
+  position: absolute;
+  top: 4%;
+  left: 8%;
+  opacity: .2;
+   font-size:200px;
+}
+.message{
+  font-family: 'Pacifico', cursive;
+   position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size:32px;
+  text-shadow:
+     1px 5px 4px rgba(0,0,0,.3),
+    0 0 2px rgba(255,255,255,.5),
+    0 0 5px rgba(255,255,255,.5),
+    0 0 10px rgba(255,255,255,.5),
+    0 0 20px rgba(255,255,255,1),
+    0 0 10px #ff00de;
+}
+@keyframes Flash{
+  50%{
+    opacity: 0;
+  }
+}

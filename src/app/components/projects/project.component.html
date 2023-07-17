@@ -1,0 +1,30 @@
+<div class="container" id="letter">
+  <div class="row" id="technologies">
+    <div class="col col-sm col-md col-lg">
+      <a class="neon">My </a>
+      <a class="flux">projects </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="content-wrapper col-lg-6" *ngFor="let project of project">
+      <div class="news-card">
+        <a [routerLink]="[project.id]" class="cardLink"></a>
+        <img [src]="project.image" alt="" class="cardImage">
+        <div class="news-card__text-wrapper">
+          <h2 class="news-card__title">{{project.title}}</h2>
+          <div class="news-card__tech">{{project.technologies}}</div>
+          <div class="news-card__details-wrapper">
+            <p class="cardDescription">{{project.simpleDescription}}&hellip;</p>
+            <a [routerLink]="[project.id]" class="readMoreButton">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

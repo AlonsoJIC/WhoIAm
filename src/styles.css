@@ -1,0 +1,14 @@
+/* You can addd global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import 'animate.css';
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+body{
+  background-image: url("assets/bgHome.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}

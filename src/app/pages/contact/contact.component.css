@@ -1,0 +1,21 @@
+/* SOCIALS DIV */
+#div1 {
+  text-align: center;
+  color: #ffffff;
+}
+#div1 svg{
+  max-height: 42px;
+  max-width: 42px;
+}
+/* /SOCIALS DIV */
+
+/* FORM DIV */
+#divForm{
+  border: solid 1px rgb(26, 25, 25);
+  border-radius: 25px;
+  background-color: #ffffffe0;
+}
+#inputsDiv{
+  max-width: 65%;
+}
+/* /FORM DIV */
