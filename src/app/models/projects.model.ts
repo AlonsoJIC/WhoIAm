@@ -3,13 +3,13 @@ import { Project } from './project.model'
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    image: '/assets/cg1.PNG',
+    image: '/assets/cg1.webp',
     images: [
-      'assets/cg1.PNG',
-      'assets/cg2.PNG',
-      'assets/cg3.PNG',
-      'assets/cg4.PNG',
-      'assets/cg5.PNG',
+      'assets/cg1.webp',
+      'assets/cg2.webp',
+      'assets/cg3.webp',
+      'assets/cg4.webp',
+      'assets/cg5.webp',
     ],
     title: '- Colors-Generator -',
     technologies: 'HTML - CSS - JAVASCRIPT - BOOTSTRAP',
@@ -18,13 +18,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
-    image: '/assets/tre1.PNG',
+    image: '/assets/tre1.webp',
     images: [
-      'assets/tre1.PNG',
-      'assets/tre2.PNG',
-      'assets/tre3.PNG',
-      'assets/tre4.PNG',
-      'assets/tre5.PNG',
+      'assets/tre1.webp',
+      'assets/tre2.webp',
+      'assets/tre3.webp',
+      'assets/tre4.webp',
+      'assets/tre5.webp',
     ],
     title: '- Trello, Projects administrator Software - Clon -',
     technologies: 'ANGULAR - TAILWINDCSS - JWT...',
@@ -33,13 +33,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    image: '/assets/lg5.PNG',
+    image: '/assets/lg5.webp',
     images: [
-      'assets/lg1.PNG',
-      'assets/lg2.PNG',
-      'assets/lg3.PNG',
-      'assets/lg4.PNG',
-      'assets/lg5.PNG',
+      'assets/lg1.webp',
+      'assets/lg2.webp',
+      'assets/lg3.webp',
+      'assets/lg4.webp',
+      'assets/lg5.webp',
     ],
     title: '- Little Games -',
     technologies: 'HTML - CSS - JAVASCRIPT',
@@ -48,12 +48,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    image: '/assets/Tesla1.PNG',
+    image: '/assets/Tesla1.webp',
     images: [
-      'assets/Tesla1.PNG',
-      'assets/Tesla2.PNG',
-      'assets/Tesla3.PNG',
-      'assets/Tesla4.PNG',
+      'assets/Tesla1.webp',
+      'assets/Tesla2.webp',
+      'assets/Tesla3.webp',
+      'assets/Tesla4.webp',
     ],
     title: '- Tesla Landing page - Clon -',
     technologies: 'ASTRO - TAILWINDCSS',
@@ -62,12 +62,12 @@ export const PROJECTS: Project[] = [
   },
 /*   {
     id: 5,
-    image: '/assets/guess.PNG',
+    image: '/assets/guess.webp',
     images: [
-      'assets/Tesla1.PNG',
-      'assets/Tesla2.PNG',
-      'assets/Tesla3.PNG',
-      'assets/Tesla4.PNG',
+      'assets/Tesla1.webp',
+      'assets/Tesla2.webp',
+      'assets/Tesla3.webp',
+      'assets/Tesla4.webp',
     ],
     title: '- Ecommerce -',
     technologies: 'Angular',
@@ -76,12 +76,12 @@ export const PROJECTS: Project[] = [
   }, */
   {
     id: 6,
-    image: '/assets/guess.PNG',
+    image: '/assets/guess.webp',
     images: [
-/*       'assets/Tesla1.PNG',
-      'assets/Tesla2.PNG',
-      'assets/Tesla3.PNG',
-      'assets/Tesla4.PNG', */
+/*       'assets/Tesla1.webp',
+      'assets/Tesla2.webp',
+      'assets/Tesla3.webp',
+      'assets/Tesla4.webp', */
     ],
     title: '- ToDo App with React -',
     technologies: 'REACT',

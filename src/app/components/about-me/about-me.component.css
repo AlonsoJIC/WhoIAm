@@ -148,10 +148,10 @@ span:nth-child(6) {
 }
 #downloadbtn {
   font-size: 15px;
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
+  --glow-color: rgb(176, 194, 255);
+  --glow-spread-color: rgba(123, 169, 255, 0.781);
+  --enhanced-glow-color: rgb(206, 231, 255);
+  --btn-color: rgb(46, 55, 136);
   border: .25em solid var(--glow-color);
   padding:1em 3em 0.1em ;
   padding-bottom: 1em;
