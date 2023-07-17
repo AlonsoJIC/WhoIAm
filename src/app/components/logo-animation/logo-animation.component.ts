@@ -41,7 +41,7 @@ export class LogoAnimationComponent implements OnInit{
         logo.top += logo.speedY;
         logo.left += logo.speedX;
 
-        if (logo.left+78 >= window.innerWidth || logo.left <= 0) {
+        if (logo.left+79 >= window.innerWidth || logo.left <= 0) {
           logo.speedX = -logo.speedX;  // Invierte la velocidad horizontal al llegar a los bordes
         }
 
