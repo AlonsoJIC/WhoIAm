@@ -4,6 +4,12 @@
 .navbar a {
   color: white;
 }
+.navbar a {
+  color: white;
+}
+.navbar a:hover {
+  color: rgb(122, 238, 253);
+}
 
 #lists {
   align-items: right;

@@ -2,10 +2,10 @@
 #letter {
   text-align: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
-#technologies {
-  margin-top: 50px;
+#letterRow {
+  margin-top: 0px;
   text-align: center;
   vertical-align: middle;
   align-items: center;
@@ -13,15 +13,15 @@
 .neon {
   font-family: "Sacramento", cursive;
   color: #FB4264;
-  font-size: 5vw;
-  line-height: 5vw;
+  font-size: 350%;
+  line-height: 350%;
   text-shadow: 0 0 3vw #F40A35;
 }
 .flux {
   font-family: "Sacramento", cursive;
   color: #426DFB;
-  font-size: 5vw;
-  line-height: 5vw;
+  font-size: 350%;
+  line-height: 350%;
   text-shadow: 0 0 3vw #2356FF;
 }
 .neon {

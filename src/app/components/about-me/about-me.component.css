@@ -11,13 +11,13 @@
 /* TITULO PRINCIPAL CON MI NOMBRE */
 #titleName {
   font-size: 85px;
-  margin-top: 55px;
   text-shadow: 0 0 5px #1e84f2eb, 0 0 15px #1e84f2eb, 0 0 20px #1e84f2eb, 0 0 40px #1e84f2eb, 0 0 60px #5af3f8, 0 0 10px #1e84f2eb, 0 0 98px #5af3f8;
-  color: #fff6a9;
+  color: #ffffff;
   font-family: "Sacramento", cursive;
   text-align: center;
   animation: blink 12s infinite;
   -webkit-animation: blink 7s infinite;
+  padding-top: 50px;
 }
 @-webkit-keyframes blink {
   20%, 24%, 55% {
@@ -90,6 +90,7 @@
 /* TITULOS ABAJO A JOB */
 #detallesDeMi {
   padding-top: 13px;
+  font-family: "Montserrat Medium";
 }
 #detallesDeMi img{
   height: 20px;
@@ -100,8 +101,8 @@
 #aboutMe {
   color: white;
   font-family: "Montserrat Medium";
+  font-size: 15px;
   max-width: 100%;
-  text-align: justify;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
