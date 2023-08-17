@@ -7,7 +7,7 @@ export const LOGOS: LOGO[] = [
     top: Math.random() * (600 - 50) + 100,
     left: 300,
     speedX: 0,
-    speedY: Math.random(),
+    speedY: Math.random() + 0.5,
   },
   {
     name: 'angular',
@@ -15,7 +15,7 @@ export const LOGOS: LOGO[] = [
     top: Math.random() * (600 - 50) + 100,
     left: 100,
     speedX: 0,
-    speedY: Math.random(),
+    speedY: Math.random() + 0.5,
   },
   {
     name: 'js',
@@ -23,7 +23,7 @@ export const LOGOS: LOGO[] = [
     top: Math.random() * (600 - 50) + 100,
     left: 0,
     speedX: 0,
-    speedY: Math.random(),
+    speedY: Math.random() + 0.5,
   },
   {
     name: 'git',
@@ -31,6 +31,6 @@ export const LOGOS: LOGO[] = [
     top: Math.random() * (600 - 50) + 100,
     left: 200,
     speedX: 0,
-    speedY: Math.random(),
+    speedY: Math.random() + 0.5,
   },
 ]

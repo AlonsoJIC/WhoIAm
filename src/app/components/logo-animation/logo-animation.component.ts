@@ -24,7 +24,7 @@ export class LogoAnimationComponent implements OnInit {
         image: '',
         top: 0 * window.innerHeight,  // Posición vertical inicial aleatoria
         left: Math.random() * window.innerWidth,   // Posición horizontal inicial aleatoria
-        speedX: Math.random() * 0.5 + 0.4,         // Velocidad horizontal aleatoria
+        speedX: 0,         // Velocidad horizontal aleatoria
         speedY: 0          // Velocidad vertical aleatoria
       };
       this.logos.push(logo);
