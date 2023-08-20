@@ -79,6 +79,10 @@ export const FOTOS: Foto[] = [
     image: '/assets/jwt.svg'
   },
   {
+    name: 'Adobe XD',
+    image: '/assets/adobexd.svg'
+  },
+  {
     name: 'ACTUALLY LEARNING Express',
     image: '/assets/ex.svg'
   },
