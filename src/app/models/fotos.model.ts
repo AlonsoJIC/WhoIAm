@@ -83,11 +83,11 @@ export const FOTOS: Foto[] = [
     image: '/assets/adobexd.svg'
   },
   {
-    name: 'ACTUALLY LEARNING Google Web Designer',
+    name: 'CURRENTLY LEARNING Google Web Designer',
     image: '/assets/gwd.svg'
   },
   {
-    name: 'ACTUALLY LEARNING React',
+    name: 'CURRENTLY LEARNING React',
     image: '/assets/react.svg'
   },
 ]
