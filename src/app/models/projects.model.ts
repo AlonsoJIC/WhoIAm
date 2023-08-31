@@ -33,18 +33,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    image: '/assets/lg5.webp',
+    image: '/assets/emp1.webp',
     images: [
-      'assets/lg1.webp',
-      'assets/lg2.webp',
-      'assets/lg3.webp',
-      'assets/lg4.webp',
-      'assets/lg5.webp',
+      'assets/emp1.webp',
+      'assets/emp2.webp',
+      'assets/emp3.webp',
+      'assets/emp4.webp',
     ],
-    title: '- Little Games -',
-    technologies: 'HTML - CSS - JAVASCRIPT',
-    simpleDescription: 'Little games, its a web app who have some simple games created with native',
-    description: 'Little games, its a web app who have some simple games created with native Javascript, HTML and CSS. In this app u can find and play, 4 games: XO Game - Flip the cards - Guess the number - Mines Game.'
+    title: '- Freelance Landing page -',
+    technologies: 'ANGULAR - BOOTSTRAP',
+    simpleDescription: 'A landing page for a customer who want to sell him books and courses in...',
+    description: 'https://emprendeencasa.shop/#/ --- A landing page for a customer who want to sell him books and courses with Google/Facebook Ads'
   },
   {
     id: 4,
@@ -59,6 +58,21 @@ export const PROJECTS: Project[] = [
     technologies: 'ASTRO - TAILWINDCSS',
     simpleDescription: 'A clon of the landing page of the famous electrics cars "Tesla", created with',
     description: 'https://www.tesla.com/es --- A clon of the landing page of the famous electrics cars "Tesla", created with Astro and TailwindCSS.'
+  },
+  {
+    id: 5,
+    image: '/assets/lg5.webp',
+    images: [
+      'assets/lg1.webp',
+      'assets/lg2.webp',
+      'assets/lg3.webp',
+      'assets/lg4.webp',
+      'assets/lg5.webp',
+    ],
+    title: '- Little Games -',
+    technologies: 'HTML - CSS - JAVASCRIPT',
+    simpleDescription: 'Little games, its a web app who have some simple games created with native',
+    description: 'Little games, its a web app who have some simple games created with native Javascript, HTML and CSS. In this app u can find and play, 4 games: XO Game - Flip the cards - Guess the number - Mines Game.'
   },
 /*   {
     id: 5,
