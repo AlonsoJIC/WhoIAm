@@ -75,6 +75,10 @@ export const FOTOS: Foto[] = [
     image: '/assets/insomnia.svg'
   },
   {
+    name: 'GSAP',
+    image: '/assets/gsap.svg'
+  },
+  {
     name: 'JWT',
     image: '/assets/jwt.svg'
   },
@@ -83,12 +87,25 @@ export const FOTOS: Foto[] = [
     image: '/assets/adobexd.svg'
   },
   {
+    name: 'Figma',
+    image: '/assets/figma.svg'
+  },
+  {
+    name: '"LEARNING" AWS',
+    image: '/assets/aws.svg'
+  },
+  {
     name: '"LEARNING" React',
     image: '/assets/react.svg'
+  },
+  {
+    name: '"LEARNING" Java',
+    image: '/assets/java.svg'
   },
   {
     name: '"LEARNING" Google Web Designer',
     image: '/assets/gwd.svg'
   },
 ]
+
 
