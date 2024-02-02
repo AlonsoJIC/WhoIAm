@@ -13,16 +13,6 @@ body{
   rgba(0, 0, 0, 0.685) 100%
 );
 :root {
-  --transparent: #00000000;
-  --green: #9ce990;
-  --light-green: #99ff6a;
-  --pink: #df98f5;
-  --blue: #0576ff;
-  --cyan: #87f8fc;
-  --orange: #ff9f45;
-  --violet: #ff61d8;
-  --lile: #9c27b0;
-  --purple: #673ab7;
   --white: #ffffff;
   --black: #000000;
   --bg:
@@ -41,15 +31,6 @@ body{
     hsla(240, 100%, 60%, 0) 95%)
   }
 
-
-/* TEXTS / TITLES */
-@mixin title($valor){
-  font-family: 'Montserrat', sans-serif;
-  font-weight:bolder;
-  font-size: $valor;
-  letter-spacing: -0.08em;
-  line-height: 0.75em;
-}
 @mixin titles($valor){
   font-family: 'Montserrat', sans-serif;
   font-weight:bolder;
