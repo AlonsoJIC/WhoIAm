@@ -1,0 +1,33 @@
+/* TITULO */
+.technologies{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight:bolder;
+  letter-spacing: -5px;
+  font-size: 350%;
+  color: var(--white);
+}
+/* LETRAS DEBAJO LOGO TECH */
+#techDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+/* IMAGENES DENTRO DE TECH */
+#techPhotos {
+  color: white;
+  justify-content: end;
+  img{
+    width: 30%;
+    height: 50%;
+  }
+}
+#techNames{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65%;
+  p{
+    margin: 0;
+  }
+}
+

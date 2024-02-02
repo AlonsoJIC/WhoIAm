@@ -1,0 +1,24 @@
+#cont1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btnDiv {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:bolder;
+  font-size: 350%;
+  letter-spacing: -5px;
+  line-height: 0.75em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+p {
+  font-family: 'Anton', sans-serif;
+
+  color: var(--white);
+}

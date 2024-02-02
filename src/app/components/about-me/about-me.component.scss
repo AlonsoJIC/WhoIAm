@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+.container {
+  padding: 8px;
+}
+#titleName {
+  @include title(280%);
+  color: var(--white);
+}
+
+/* TITULO SECUNDARIO */
+#title2 {
+  @include titles(300%);
+  animation: fadeInDown;
+  animation-duration: 5.5s;
+  background: linear-gradient(-45deg,#bff5f5, #ccfafa, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* TEXTO ABOUT ME */
+#aboutMe {
+  @include normalText(1.2em);
+  text-align: justify;
+}
+

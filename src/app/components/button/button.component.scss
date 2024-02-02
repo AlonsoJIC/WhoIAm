@@ -1,0 +1,41 @@
+.myBtn {
+  position:relative;
+}
+
+button {
+  display: block;
+  padding: 24px 48px;
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.myBtn:hover {
+  color: #101010;
+}
+.myBtn:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s
+}
+.myBtn:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}

@@ -1,22 +1,46 @@
 <div class="grad-bar sticky-top"></div>
 <nav class="navbar navbar-expand-lg p-3 sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" data-bs-theme="dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+  <div class="container">
+    <button class="navbar-toggler" data-bs-theme="dark" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a routerLinkActive="active" class="nav-link active" aria-current="page" routerLink="home">
-          About me.
-       </a>
+          <span class="navbarSpan">
+            About me.
+          </span>
+        </a>
         <a routerLinkActive="active" class="nav-link active" aria-current="page" routerLink="projects">
-          Projects.
-       </a>
+          <span class="navbarSpan">
+            Projects.
+          </span>
+        </a>
         <a routerLinkActive="active" class="nav-link active" aria-current="page" routerLink="contact">
-          Contact me.
+          <span class="navbarSpan">
+            Contact me.
+          </span>
         </a>
       </div>
     </div>
+
+    <div class="">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/alonsojic/" role="button">
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/jalonsojic/" role="button">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AlonsoJIC" role="button">
+        <fa-icon [icon]="faGithub"></fa-icon>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AlonsoJIC" role="button">
+        <fa-icon [icon]="faDiscord"></fa-icon>
+      </a>
+    </div>
+
   </div>
 </nav>

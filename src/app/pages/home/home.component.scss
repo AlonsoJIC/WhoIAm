@@ -1,0 +1,163 @@
+@import "../../../styles.scss";
+
+section {
+  top: 0;
+  position: fixed;
+}
+.outer  {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+.titleText {
+  margin-bottom: 0;
+  letter-spacing: -0.020em;
+  line-height: 0.70em;
+  color: var(--white);
+}
+span {
+  font-size: 15px;
+  margin-left: -12px;
+}
+
+
+.foto {
+  z-index: -1;
+  position: relative;
+  text-align: end;
+  .img1 {
+    width: 12%;
+  }
+  .img2 {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .img1 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .img2 {
+    display: none;
+  }
+}
+
+
+ .home {
+  background-color: var(--black);
+}
+.first {
+  .bg {
+    background-image: $bg-gradient,
+    url("../../../assets/bg1.avif")}
+}
+.second {
+  .bg {
+    background-image: $bg-gradient,
+    url(https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  }
+}
+.third {
+  .bg {
+    background-image: $bg-gradient,
+    url("../../../assets/bg2.avif")
+  }
+}
+
+
+
+
+// n is number of stars required
+@function multiple-box-shadow ($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #7777779d';
+  }
+  @return unquote($value);
+}
+$shadows-small: multiple-box-shadow(75);
+$shadows-medium: multiple-box-shadow(50);
+$shadows-big: multiple-box-shadow(80);
+
+#stars {
+  z-index: 2;
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+#stars2 {
+  z-index: 2;
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+#stars3 {
+  z-index: 2;
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+};
