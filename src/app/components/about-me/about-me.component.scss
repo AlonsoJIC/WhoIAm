@@ -5,13 +5,16 @@
 #titleName {
   @include titles(280%);
   color: var(--white);
+  animation: slideInLeft;
+  animation-duration: 3s;
+
 }
 
 /* TITULO SECUNDARIO */
 #title2 {
   @include titles(300%);
-  animation: fadeInDown;
-  animation-duration: 5.5s;
+  animation: slideInLeft;
+  animation-duration: 2.5s;
   background: linear-gradient(-45deg,#bff5f5, #ccfafa, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
@@ -32,5 +35,7 @@
 #aboutMe {
   @include normalText(1.2em);
   text-align: justify;
+  animation: slideInUp;
+  animation-duration: 2.5s;
 }
 

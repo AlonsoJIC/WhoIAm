@@ -1,11 +1,16 @@
-/* TITULO */
+#mainCont{
+  padding: 0;
+}
 .technologies{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight:bolder;
   letter-spacing: -5px;
-  font-size: 350%;
+  font-size: 300%;
   color: var(--white);
+  animation: swing;
+  animation-duration: 2.5s;
+
 }
 /* LETRAS DEBAJO LOGO TECH */
 #techDiv {
