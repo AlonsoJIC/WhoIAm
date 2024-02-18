@@ -15,11 +15,9 @@
   @include titles(100%);
   color: var(--white);
   letter-spacing: -0.1em;
-  border-bottom: solid 1px rgb(255, 255, 255);
 }
 .navbarSpan:hover {
   color: rgb(219, 252, 252);
-  border-top: solid 1px white;
 }
 .grad-bar {
   width: 100%;
