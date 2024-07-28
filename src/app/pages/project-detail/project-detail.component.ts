@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'; // Importa Location
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 
@@ -15,7 +16,8 @@ export class ProjectDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private location: Location // Inyecta Location
   ) {}
 
   ngOnInit(): void {
@@ -34,5 +36,9 @@ export class ProjectDetailComponent implements OnInit {
 
   setSelectedImage(image: string): void {
     this.selectedImage = image;
+  }
+
+  goBack(): void {
+    this.location.back(); // Método para regresar a la última pestaña
   }
 }

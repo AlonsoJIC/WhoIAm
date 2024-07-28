@@ -71,3 +71,14 @@
   font-family: "Montserrat Medium";
 }
 /* /DESCRIPRION */
+
+.backBtn {
+  position:static ;
+  background: rgb(189, 8, 8);
+  border: solid 1px;
+  border-radius: 15px;
+  box-shadow: inset;
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
