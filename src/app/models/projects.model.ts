@@ -33,6 +33,20 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
+    image: '/assets/gp1.webp',
+    images: [
+      'assets/gp1.webp',
+      'assets/gp2.webp',
+      'assets/gp3.webp',
+      'assets/gp4.webp',
+    ],
+    title: '- Godo Painting, Tampa,FL -',
+    technologies: 'WORDPRESS',
+    simpleDescription: 'https://godopainting.com/ --- Godo Painting its a company that provides painting services in Tampa, FL. ',
+    description: 'Godo Painting its a company that provides painting services in Tampa, FL. I was provide freelance services for the Web creation, hosting and SEO optimizations.'
+  },
+  {
+    id: 4,
     image: '/assets/emp1.webp',
     images: [
       'assets/emp1.webp',
@@ -40,13 +54,13 @@ export const PROJECTS: Project[] = [
       'assets/emp3.webp',
       'assets/emp4.webp',
     ],
-    title: '- Freelance Landing page -',
+    title: '- Emprende en Casa, Landing -',
     technologies: 'ANGULAR - BOOTSTRAP',
     simpleDescription: 'A landing page for a customer who want to sell him books and courses in...',
     description: 'https://emprendeencasa.shop/#/ --- A landing page for a customer who want to sell him books and courses with Google/Facebook Ads'
   },
   {
-    id: 4,
+    id: 5,
     image: '/assets/Tesla1.webp',
     images: [
       'assets/Tesla1.webp',
@@ -60,7 +74,7 @@ export const PROJECTS: Project[] = [
     description: 'https://www.tesla.com/es --- A clon of the landing page of the famous electrics cars "Tesla", created with Astro and TailwindCSS.'
   },
   {
-    id: 5,
+    id: 6,
     image: '/assets/lg5.webp',
     images: [
       'assets/lg1.webp',
@@ -74,32 +88,15 @@ export const PROJECTS: Project[] = [
     simpleDescription: 'Little games, its a web app who have some simple games created with native',
     description: 'Little games, its a web app who have some simple games created with native Javascript, HTML and CSS. In this app u can find and play, 4 games: XO Game - Flip the cards - Guess the number - Mines Game.'
   },
-/*   {
-    id: 5,
-    image: '/assets/guess.webp',
-    images: [
-      'assets/Tesla1.webp',
-      'assets/Tesla2.webp',
-      'assets/Tesla3.webp',
-      'assets/Tesla4.webp',
-    ],
-    title: '- Ecommerce -',
-    technologies: 'Angular',
-    simpleDescription: 'Updating and adding Payment Gateways',
-    description: 'On update...'
-  }, */
   {
-    id: 6,
+    id: 7,
     image: '/assets/guess.webp',
     images: [
-/*       'assets/Tesla1.webp',
-      'assets/Tesla2.webp',
-      'assets/Tesla3.webp',
-      'assets/Tesla4.webp', */
     ],
     title: '- ToDo App with React -',
     technologies: 'REACT',
     simpleDescription: 'Actually learning about how to use React and theirs libraries.',
     description: 'Under construction...'
   },
+
 ]
