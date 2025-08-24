@@ -5,9 +5,10 @@ import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
-  selector: 'app-project-detail',
-  templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss']
+    selector: 'app-project-detail',
+    templateUrl: './project-detail.component.html',
+    styleUrls: ['./project-detail.component.scss'],
+    standalone: false
 })
 export class ProjectDetailComponent implements OnInit {
   project: Project | undefined;
