@@ -1,0 +1,43 @@
+/* Variables y mixins compartidos - SIN Bootstrap */
+
+/*COLORS */
+$bg-gradient: linear-gradient(
+ 180deg,
+ rgba(0, 0, 0, 0.6) 0%,
+ rgba(0, 0, 0, 0.685) 100%
+);
+
+:root {
+ --white: #ffffff;
+ --black: #000000;
+ --bg:
+ radial-gradient(
+   60vmax 60vmax at 0% 0%,
+   hsl(240, 100%, 2%) 0%,
+   hsla(240, 100%, 2%, 0.753) 95%),
+ radial-gradient(
+   80vmax 50vmax at 110% -10%,
+   hsla(175, 100%, 60%, 0.9) 0%,
+   hsla(200, 100%, 50%, 0.5) 50%,
+   hsla(240, 100%, 50%, 0) 95%),
+ radial-gradient(
+   90vmax 50vmax at 50vmax 50vmax,
+   hsla(260, 100%, 60%, 0.9) 0%,
+   hsla(240, 100%, 60%, 0) 95%)
+ }
+
+@mixin titles($valor){
+ font-family: 'Montserrat', sans-serif;
+ font-weight:bolder;
+ font-size: $valor;
+ letter-spacing: -5px;
+ line-height: 0.75em;
+ text-transform: uppercase;
+}
+
+@mixin normalText($valor){
+ font-family: 'Anton', sans-serif;
+ font-size: $valor;
+ line-height: 1.3em;
+ color: var(--white);
+}

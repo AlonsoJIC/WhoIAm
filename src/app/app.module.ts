@@ -18,6 +18,10 @@ import { AboutProjectsComponent } from './components/about-projects/about-projec
 import { ButtonComponent } from './components/button/button.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
+// Import services for DI
+import { ErrorHandlerService } from './services/error-handler.service';
+import { SeoService } from './services/seo.service';
+
 
 
 @NgModule({

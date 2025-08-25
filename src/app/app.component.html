@@ -1,2 +1,20 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<!-- Loading Screen -->
+<div *ngIf="isLoading" class="loading-screen">
+  <div class="loading-content">
+    <div class="spinner"></div>
+    <h2 class="loading-text">{{loadingText}}</h2>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="loadingProgress"></div>
+      </div>
+      <span class="progress-percentage">{{loadingProgress}}%</span>
+    </div>
+    <p class="loading-subtitle">Preparing the web for the best experience...</p>
+  </div>
+</div>
+
+<!-- Main App Content -->
+<div *ngIf="!isLoading" class="app-content">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+</div>

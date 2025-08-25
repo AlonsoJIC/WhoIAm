@@ -1,4 +1,6 @@
-@import "../../../styles.scss";
+@use "../../../variables.scss" as *;
+@use "sass:math";
+@use "sass:string";
 
 section {
   top: 0;
@@ -89,11 +91,11 @@ span {
 
 // n is number of stars required
 @function multiple-box-shadow ($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  $value: '#{math.random(2000)}px #{math.random(2000)}px #FFF';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #7777779d';
+    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px #7777779d';
   }
-  @return unquote($value);
+  @return string.unquote($value);
 }
 $shadows-small: multiple-box-shadow(75);
 $shadows-medium: multiple-box-shadow(50);

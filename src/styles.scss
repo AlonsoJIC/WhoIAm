@@ -1,6 +1,6 @@
 /* You can addd global styles to this file, and also import other style files */
-@import "bootstrap/dist/css/bootstrap.css";
-@import 'animate.css';
+@use "bootstrap/dist/css/bootstrap.css";
+@use 'animate.css';
 
 body{
   background: linear-gradient(90deg, rgba(0,0,0,1) 35%, rgb(0, 0, 0) 100%);
