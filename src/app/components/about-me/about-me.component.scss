@@ -1,25 +1,72 @@
 @use "../../../variables.scss" as *;
-.container {
-  padding: 8px;
+
+.container-fluid {
+  padding: 0;
 }
+
 #titleName {
-  @include titles(280%);
+  @include titles(clamp(2rem, 8vw, 4.5rem));
   color: var(--white);
   animation: slideInLeft;
   animation-duration: 3s;
-
+  line-height: 1.1;
 }
 
 /* TITULO SECUNDARIO */
 #title2 {
-  @include titles(300%);
+  @include titles(clamp(2.2rem, 9vw, 5rem));
   animation: slideInLeft;
   animation-duration: 2.5s;
   background: linear-gradient(-45deg,#bff5f5, #ccfafa, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1.1;
 }
+
+#aboutMe {
+  color: var(--white);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  text-align: justify;
+  animation: slideInRight;
+  animation-duration: 2s;
+  margin-bottom: 0;
+}
+
+// Media queries específicas
+@media (max-width: 768px) {
+  #titleName, #title2 {
+    text-align: center;
+  }
+  
+  #aboutMe {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding: 0 10px;
+  }
+  
+  #titleName {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  #title2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #aboutMe {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
 @keyframes entrance {
 	0% {
 		opacity: 0;
@@ -29,13 +76,5 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-
-/* TEXTO ABOUT ME */
-#aboutMe {
-  @include normalText(1.2em);
-  text-align: justify;
-  animation: slideInUp;
-  animation-duration: 2.5s;
 }
 
