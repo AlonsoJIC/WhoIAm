@@ -12,10 +12,4 @@ export class NavbarComponent {
   faLinkedin = faLinkedin;
   faInstagram = faInstagram;
   faDiscord = faDiscord;
-
-  isMenuCollapsed = true;
-
-  toggleMenu() {
-    this.isMenuCollapsed = !this.isMenuCollapsed;
-  }
 }
