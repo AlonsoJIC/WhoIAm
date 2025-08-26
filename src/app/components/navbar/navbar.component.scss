@@ -2,6 +2,38 @@
 .navbar{
   background-color: rgba(0, 0, 0, 0.377);
 }
+
+@media only screen and (max-width: 749px) {
+	.navbar-toggler {
+		display: block !important;
+		border: none;
+		background: transparent;
+	}
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+		width: 2rem;
+		height: 2rem;
+	}
+	.navbar-collapse {
+		display: none;
+	}
+	.navbar-collapse.collapse {
+		display: block;
+	}
+}
+@media only screen and (min-width: 750px) {
+	.navbar-toggler {
+		display: none !important;
+	}
+	.navbar-collapse {
+		display: flex !important;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+}
 .container {
   padding: 0;
 }
@@ -15,6 +47,21 @@
   @include titles(100%);
   color: var(--white);
   letter-spacing: -0.1em;
+}
+
+@media only screen and (max-width: 400px) {
+	.navbarSpan {
+		font-size: 0.85rem !important;
+		padding: 0.2rem 0.5rem !important;
+	}
+	.btn {
+		font-size: 0.85rem !important;
+		padding: 0.2rem 0.5rem !important;
+	}
+	.navbar-toggler-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
 }
 .navbarSpan:hover {
   color: rgb(219, 252, 252);
