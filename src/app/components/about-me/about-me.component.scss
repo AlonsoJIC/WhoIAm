@@ -3,7 +3,7 @@
   padding: 8px;
 }
 #titleName {
-  @include titles(280%);
+  @include titles(270%);
   color: var(--white);
   animation: slideInLeft;
   animation-duration: 3s;
@@ -15,10 +15,13 @@
   @include titles(300%);
   animation: slideInLeft;
   animation-duration: 2.5s;
-  background: linear-gradient(-45deg,#bff5f5, #ccfafa, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(-45deg,#bff5f5, #ccfafa, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Prefijos para transiciones y transformaciones */
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
 }
 @keyframes entrance {
         0% {
@@ -50,3 +53,12 @@
       font-size: 1rem !important;
     }
   }
+    /* Responsive adicional */
+    @media only screen and (max-width: 600px) {
+      #titleName, #title2 {
+        font-size: 2rem !important;
+      }
+      #aboutMe {
+        font-size: 0.9rem !important;
+      }
+    }

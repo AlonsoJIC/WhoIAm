@@ -16,6 +16,7 @@ button {
   z-index: 1;
   cursor: pointer;
   transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
 }
 
 .myBtn:hover {
@@ -31,11 +32,23 @@ button {
   height:100%;
   z-index: -1;
   transform: scaleX(0);
+  -webkit-transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s
 }
 .myBtn:hover:before {
   transform: scaleX(1);
+  -webkit-transform: scaleX(1);
   transform-origin: left;
   transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+  }
+
+  /* Responsive adicional */
+
+  @media only screen and (max-width: 600px) {
+    button {
+      padding: 12px 24px;
+      font-size: 12px;
+    }
 }

@@ -1,7 +1,7 @@
 #cont1 {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .btnDiv {
@@ -17,6 +17,16 @@ h1 {
   text-transform: uppercase;
   color: var(--white);
 }
+
+    /* Responsive adicional */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.2rem !important;
+      }
+      p {
+        font-size: 0.9rem !important;
+      }
+    }
 p {
   font-family: 'Anton', sans-serif;
 
