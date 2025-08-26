@@ -37,4 +37,16 @@
   text-align: justify;
   animation: slideInUp;
   animation-duration: 2.5s;
-}
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    #titleName {
+      font-size: 2rem !important;
+    }
+    #title2 {
+      font-size: 1.9rem !important;
+    }
+    #aboutMe {
+      font-size: 1rem !important;
+    }
+  }
