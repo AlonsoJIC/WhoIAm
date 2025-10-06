@@ -264,14 +264,12 @@ npx angular-cli-ghpages --dir=dist/portafolio
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact & Social
+## 📞 Contact
 
-**Alonso Jiménez** - Frontend Developer
-
-- 🌐 **Portfolio**: [yourwebsite.com](https://yourwebsite.com)
-- 💼 **LinkedIn**: [@alonsojic](https://www.linkedin.com/in/alonsojic/)
-- 🐱 **GitHub**: [@AlonsoJIC](https://github.com/AlonsoJIC)
-- 📧 **Email**: [your.email@example.com](mailto:your.email@example.com)
+**Alonso Jiménez**
+- **GitHub**: [@AlonsoJIC](https://github.com/AlonsoJIC)
+- **LinkedIn**: [alonsojic](https://www.linkedin.com/in/alonsojic/)
+- **Portfolio**: [yourwebsite.com](https://yourwebsite.com)
 
 ## 🙏 Acknowledgments
 
