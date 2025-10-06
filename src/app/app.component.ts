@@ -179,25 +179,16 @@ export class AppComponent implements OnInit {
    */
   private loadImages(): Promise<void> {
     return new Promise((resolve, reject) => {
-      // Lista completa de todas las imágenes organizadas por prioridad
-      const imagesToLoad = [
-        // IMÁGENES CRÍTICAS - Se ven inmediatamente
+      // Imágenes críticas - Carga inmediata
+      const criticalImages = [
         'assets/fotoPerfil.webp',
         'assets/nombre.webp',
-        'assets/alonso.webp',
         'assets/bg1.webp',
-        'assets/bg2.webp',
-        'assets/avatar.svg',
+        'assets/avatar.svg'
+      ];
 
-        // ICONOS DE TECNOLOGÍAS - Probablemente en home/about
-        'assets/angular.svg',
-        'assets/angularL.svg',
-        'assets/css.svg',
-        'assets/cssL.svg',
-        'assets/html.svg',
-        'assets/htmlL.svg',
-        'assets/js.svg',
-        'assets/jsL.svg',
+      // Imágenes de tecnologías principales - Carga secundaria
+      const secondaryImages = [
         'assets/ts.svg',
         'assets/react.svg',
         'assets/node.svg',
@@ -205,51 +196,35 @@ export class AppComponent implements OnInit {
         'assets/git.svg',
         'assets/gitL.svg',
         'assets/bootstrap.svg',
-        'assets/sass.svg',
+        'assets/sass.svg'
+      ];
 
-        // IMÁGENES DE PROYECTOS - Tesla
-        'assets/Tesla1.webp',
-        'assets/Tesla2.webp',
-        'assets/Tesla3.webp',
-        'assets/Tesla4.webp',
-
-        // IMÁGENES DE PROYECTOS - Emprendimientos
-        'assets/emp1.webp',
-        'assets/emp2.webp',
-        'assets/emp3.webp',
-        'assets/emp4.webp',
-
-        // IMÁGENES DE PROYECTOS - Guess
+      // Imágenes de proyectos - Lazy loading
+      const projectImages = [
         'assets/guess.webp',
-
-        // IMÁGENES DE PROYECTOS - CG
         'assets/cg1.webp',
         'assets/cg2.webp',
         'assets/cg3.webp',
         'assets/cg4.webp',
         'assets/cg5.webp',
-
-        // IMÁGENES DE PROYECTOS - GP
         'assets/gp1.webp',
         'assets/gp2.webp',
         'assets/gp3.webp',
         'assets/gp4.webp',
-
-        // IMÁGENES DE PROYECTOS - LG
         'assets/lg1.webp',
         'assets/lg2.webp',
         'assets/lg3.webp',
         'assets/lg4.webp',
         'assets/lg5.webp',
-
-        // IMÁGENES DE PROYECTOS - TRE
         'assets/tre1.webp',
         'assets/tre2.webp',
         'assets/tre3.webp',
         'assets/tre4.webp',
-        'assets/tre5.webp',
+        'assets/tre5.webp'
+      ];
 
-        // ICONOS ADICIONALES DE TECNOLOGÍAS
+      // Iconos adicionales - Lazy loading
+      const additionalIcons = [
         'assets/astro.svg',
         'assets/figma.svg',
         'assets/adobexd.svg',
@@ -269,6 +244,24 @@ export class AppComponent implements OnInit {
         'assets/gwd.svg',
         'assets/heart.svg'
       ];
+
+      // Cargar imágenes críticas y secundarias inicialmente
+      const imagesToLoad = [...criticalImages, ...secondaryImages];
+
+      // Registrar todas las imágenes en el ImageLoaderService para lazy loading
+      const allImages = {
+        critical: criticalImages,
+        secondary: secondaryImages,
+        projects: projectImages,
+        icons: additionalIcons
+      };
+
+      // Guardar las rutas de las imágenes para que estén disponibles para lazy loading
+      try {
+        localStorage.setItem('portfolioImages', JSON.stringify(allImages));
+      } catch (error) {
+        console.warn('Failed to cache image paths:', error);
+      }
 
       this.totalAssets = imagesToLoad.length;
       this.loadedAssets = 0;

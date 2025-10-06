@@ -8,20 +8,24 @@
       </div>
 
 
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="10000">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        data-bs-interval="10000">
         <div class="carousel-inner">
           <ng-container *ngFor="let image of project.images; let i = index">
             <div class="carousel-item" [class.active]="image === selectedImage">
-              <img [src]="image" alt="...">
+              <img [lazyLoad]="image" [defaultImage]="'assets/placeholder.webp'"
+                [errorImage]="'assets/placeholder.webp'" alt="Project screenshot">
             </div>
           </ng-container>
         </div>
       </div>
 
       <div class="container">
-        <div class="row" *ngIf="project && project.images && project.images.length > 1"> <!-- VERIFICA SI TIENE ITEMS EL ARRAY PARA MOSTRARSE O NO -->
+        <div class="row" *ngIf="project && project.images && project.images.length > 1">
+          <!-- VERIFICA SI TIENE ITEMS EL ARRAY PARA MOSTRARSE O NO -->
           <div class="image-thumbnails ">
-            <img *ngFor="let image of project.images" [src]="image" alt="Thumbnail" (click)="setSelectedImage(image)"
+            <img *ngFor="let image of project.images" [lazyLoad]="image" [defaultImage]="'assets/placeholder.webp'"
+              [errorImage]="'assets/placeholder.webp'" alt="Project thumbnail" (click)="setSelectedImage(image)"
               [class.selected]="image === selectedImage">
           </div>
         </div>

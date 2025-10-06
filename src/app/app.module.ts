@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ImageCacheInterceptor } from './interceptors/image-cache.interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +28,13 @@ import { SeoService } from './services/seo.service';
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    LazyLoadImageModule
+  ],
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -40,14 +50,14 @@ import { SeoService } from './services/seo.service';
     ProjectDetailComponent,
     ButtonComponent,
     ContactMeComponent
-
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ImageCacheInterceptor,
+      multi: true
+    }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
