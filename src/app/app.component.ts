@@ -242,7 +242,21 @@ export class AppComponent implements OnInit {
         'assets/wordpress.svg',
         'assets/jwt.svg',
         'assets/gwd.svg',
-        'assets/heart.svg'
+        'assets/heart.svg',
+        // Nuevas tecnologías
+        'assets/csharp.svg',
+        'assets/rust.svg',
+        'assets/tauri.svg',
+        'assets/python.svg',
+        'assets/reactL.svg',
+        'assets/atlassian.svg',
+        'assets/firebase.svg',
+        'assets/scrum.svg',
+        'assets/express.svg',
+        'assets/flask.svg',
+        'assets/oracle.svg',
+        'assets/spring.svg',
+        'assets/laravel.svg'
       ];
 
       // Cargar imágenes críticas, secundarias e iconos adicionales inicialmente

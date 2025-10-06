@@ -8,21 +8,18 @@
   display: flex;
   justify-content: center;
 }
-h1 {
+
+.works{
   font-family: 'Montserrat', sans-serif;
-  font-weight:bolder;
-  font-size: 350%;
-  letter-spacing: -5px;
-  line-height: 0.75em;
   text-transform: uppercase;
+  font-weight:bolder;
+  letter-spacing: -5px;
+  font-size: 300%;
   color: var(--white);
 }
 
     /* Responsive adicional */
     @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.2rem !important;
-      }
       p {
         font-size: 0.9rem !important;
       }

@@ -4,7 +4,7 @@
     <div class="technologies">
       <span>Technologies</span>
     </div>
-    <div *ngFor="let foto of fotos" class="col-4 col-sm-4 col-md-3 col-lg-2" id="techPhotos">
+    <div *ngFor="let foto of fotos" class="col-3 col-sm-3 col-md-3 col-lg-2" id="techPhotos">
       <img [lazyLoad]="foto.image" [defaultImage]="'assets/placeholder.webp'" [errorImage]="'assets/placeholder.webp'"
         alt="Technology icon">
       <div id="techNames">
