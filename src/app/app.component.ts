@@ -245,10 +245,10 @@ export class AppComponent implements OnInit {
         'assets/heart.svg'
       ];
 
-      // Cargar imágenes críticas y secundarias inicialmente
-      const imagesToLoad = [...criticalImages, ...secondaryImages];
+      // Cargar imágenes críticas, secundarias e iconos adicionales inicialmente
+      const imagesToLoad = [...criticalImages, ...secondaryImages, ...additionalIcons];
 
-      // Registrar todas las imágenes en el ImageLoaderService para lazy loading
+      // Registrar todas las imágenes en el ImageLoaderService
       const allImages = {
         critical: criticalImages,
         secondary: secondaryImages,
