@@ -11,8 +11,8 @@ export const PROJECTS: Project[] = [
       'assets/cg4.webp',
       'assets/cg5.webp',
     ],
-    title: '- Colors-Generator -',
-    technologies: 'HTML - CSS - JAVASCRIPT - BOOTSTRAP',
+    title: 'Colors Generator',
+    technologies: ['HTML', 'CSS', 'JAVASCRIPT', 'BOOTSTRAP'],
     simpleDescription: 'Colors generator, is a web application gradient generator, with which you can generate ',
     description: 'It has many features such as adding or removing colors, choosing color directions, generating random colors and choosing default color palette. This application was created with HTML, CSS Javascript and Bootstrap.'
   },
@@ -26,8 +26,8 @@ export const PROJECTS: Project[] = [
       'assets/tre4.webp',
       'assets/tre5.webp',
     ],
-    title: '- Trello, Projects administrator Software - Clon -',
-    technologies: 'ANGULAR - TAILWINDCSS - JWT...',
+    title: 'Trello, Projects administrator Clon',
+    technologies: ['ANGULAR', 'TAILWINDCSS', 'JWT'],
     simpleDescription: 'Trello its a Projects administrator Software really similar than a',
     description: 'https://trello.com/login --- Trello its a Projects administrator Software really similar than a ToDo Application. Trello takes this to the next level, with a lot of more features. In this clon i make bunch of funcionalities, such as: Auth, Register, Recovery, Token, To do / Doing / Done, tranfersItems, makeNewItems...'
   },
@@ -40,8 +40,8 @@ export const PROJECTS: Project[] = [
       'assets/gp3.webp',
       'assets/gp4.webp',
     ],
-    title: '- Godo Painting, Tampa,FL -',
-    technologies: 'WORDPRESS',
+    title: 'Godo Painting, Tampa,FL',
+    technologies: ['WORDPRESS'],
     simpleDescription: 'https://godopainting.com/ --- Godo Painting its a company that provides painting services in Tampa, FL. ',
     description: 'Godo Painting its a company that provides painting services in Tampa, FL. I was provide freelance services for the Web creation, hosting and SEO optimizations.'
   },
@@ -54,8 +54,8 @@ export const PROJECTS: Project[] = [
       'assets/emp3.webp',
       'assets/emp4.webp',
     ],
-    title: '- Emprende en Casa, Landing -',
-    technologies: 'ANGULAR - BOOTSTRAP',
+    title: 'Emprende en Casa, Landing',
+    technologies: ['ANGULAR', 'BOOTSTRAP'],
     simpleDescription: 'A landing page for a customer who want to sell him books and courses in...',
     description: 'https://emprendeencasa.shop/#/ --- A landing page for a customer who want to sell him books and courses with Google/Facebook Ads'
   },
@@ -68,8 +68,8 @@ export const PROJECTS: Project[] = [
       'assets/Tesla3.webp',
       'assets/Tesla4.webp',
     ],
-    title: '- Tesla Landing page - Clon -',
-    technologies: 'ASTRO - TAILWINDCSS',
+    title: 'Tesla Landing page Clon',
+    technologies: ['ASTRO', 'TAILWINDCSS'],
     simpleDescription: 'A clon of the landing page of the famous electrics cars "Tesla", created with',
     description: 'https://www.tesla.com/es --- A clon of the landing page of the famous electrics cars "Tesla", created with Astro and TailwindCSS.'
   },
@@ -83,18 +83,48 @@ export const PROJECTS: Project[] = [
       'assets/lg4.webp',
       'assets/lg5.webp',
     ],
-    title: '- Little Games -',
-    technologies: 'HTML - CSS - JAVASCRIPT',
+    title: 'Little Games',
+    technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
     simpleDescription: 'Little games, its a web app who have some simple games created with native',
     description: 'Little games, its a web app who have some simple games created with native Javascript, HTML and CSS. In this app u can find and play, 4 games: XO Game - Flip the cards - Guess the number - Mines Game.'
   },
   {
     id: 7,
+    image: '/assets/P2-1.webp',
+    images: [
+      'assets/P2-1.webp',
+      'assets/P2-2.webp',
+      'assets/P2-3.webp',
+      'assets/P2-4.webp',
+      'assets/P2-5.webp',
+    ],
+    title: 'Workflow',
+    technologies: ['ANGULAR', 'TYPESCRIPT', 'SPRINGBOOT'],
+    simpleDescription: 'A simple app to manage it all...',
+    description: 'Workflow is a project management application designed to help teams collaborate and manage their tasks efficiently. It offers features such as task assignment, progress tracking, and deadline management to streamline workflows and enhance productivity.'
+  },
+  {
+    id: 8,
+    image: '/assets/P3-1.webp',
+    images: [
+      'assets/P3-1.webp',
+      'assets/P3-2.webp',
+      'assets/P3-3.webp',
+      'assets/P3-4.webp',
+      'assets/P3-5.webp',
+    ],
+    title: 'Employee Management System',
+    technologies: ['REACT', 'LARAVEL'],
+    simpleDescription: 'Application to manage employees, departments and roles within a company...',
+    description: 'The Employee Management System is a web application designed to streamline the management of employee information, departments, and roles within a company. Built with React for the frontend and Laravel for the backend, this system provides an intuitive interface for HR personnel to add, update, and view employee records efficiently.'
+  },
+  {
+    id: 9,
     image: '/assets/guess.webp',
     images: [
     ],
-    title: '- ToDo App with React -',
-    technologies: 'REACT',
+    title: 'ToDo App with React',
+    technologies: ['REACT'],
     simpleDescription: 'Actually learning about how to use React and theirs libraries.',
     description: 'Under construction...'
   },

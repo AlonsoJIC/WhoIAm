@@ -72,13 +72,31 @@
 }
 /* /DESCRIPRION */
 
+
+
 .backBtn {
-  position:static ;
-  background: rgb(189, 8, 8);
-  border: solid 1px;
-  border-radius: 15px;
-  box-shadow: inset;
-  font-size: 100%;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
+  --color: #ff0000;         /* Color base */
+  --hover: #ff3300;         /* Tono de relleno (puedes cambiarlo) */
+
+  color: var(--color);
+  background: none;
+  border: 2px solid var(--color);
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: 
+    color 0.25s ease-in-out,
+    border-color 0.25s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+  
+  /* Estado inicial: sin relleno */
+  box-shadow: inset 0 0 0 0 var(--hover);
+}
+
+.backBtn:hover,
+.backBtn:focus {
+  color: #fff;
+  border-color: var(--hover);
+  box-shadow: inset 0 -3.25em 0 0 var(--hover); /* Sube el relleno */
 }

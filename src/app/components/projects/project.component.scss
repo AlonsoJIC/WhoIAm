@@ -87,17 +87,104 @@
   padding: 0.5rem;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* DIV DE TODA LA CARD */
 .news-card {
   border: 0px solid aqua;
   margin: 0.5rem;
   position: relative;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   flex: 1;
   min-width: 290px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
   -webkit-backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  &.animate {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .tech-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .action-button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      
+      &.details-button {
+        background: #426DFB;
+        color: white;
+        &:hover {
+          background: #426DFB;
+        }
+      }
+
+      &.live-button {
+        background: #28D7FE;
+        color: white;
+        &:hover {
+          background: #28D7FE;
+        }
+      }
+
+      &.github-button {
+        background: #333;
+        color: white;
+        &:hover {
+          background: #000;
+        }
+      }
+
+      i {
+        margin-right: 0.3rem;
+      }
+    }
+  }
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -109,10 +196,14 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0)
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   z-index: 0;
 }
 .cardLink {
@@ -138,10 +229,18 @@
 /* TEXTOS SOBRE LA CARD */
 .news-card__text-wrapper {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0;
   padding: 1rem;
   color: white;
-  transition: background-color 1.5s ease;
+  width: 100%;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 /* TEXTOS VISIBLES */
 .news-card__title {
@@ -164,12 +263,15 @@
   opacity: 1;
 }
 .news-card:hover .news-card__text-wrapper {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 .news-card:hover .news-card__title {
   color: #70e5fa;
 }
-.news-card:hover .news-card__image {
+.news-card:hover .cardImage {
   transform: scale(1.2);
   z-index: -1;
 }

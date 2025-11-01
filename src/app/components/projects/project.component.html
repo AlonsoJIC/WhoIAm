@@ -11,18 +11,29 @@
 <div class="container">
   <div class="row">
 
-    <div class="content-wrapper col-lg-6" *ngFor="let project of project">
-      <div class="news-card">
-        <a [routerLink]="[project.id]" class="cardLink"></a>
+    <div class="content-wrapper col-lg-6" *ngFor="let project of project; let i = index">
+      <div class="news-card" [class.animate]="true" [style.animation-delay]="i * 0.2 + 's'">
         <img [lazyLoad]="project.image" [defaultImage]="'assets/placeholder.webp'" [errorImage]="'assets/error.webp'"
           alt="Project preview" class="cardImage" loading="lazy">
         <div class="news-card__text-wrapper">
           <h2 class="news-card__title">{{project.title}}</h2>
-          <div class="news-card__tech">{{project.technologies}}</div>
+          <div class="news-card__tech">
+            <span class="tech-badge" *ngFor="let tech of project.technologies">{{tech}}</span>
+          </div>
           <div class="news-card__details-wrapper">
-            <p class="cardDescription">{{project.simpleDescription}}&hellip;</p>
-            <a [routerLink]="[project.id]" class="readMoreButton">Read more <i
-                class="fas fa-long-arrow-alt-right"></i></a>
+            <p class="cardDescription">{{project.simpleDescription}}</p>
+            <div class="card-actions">
+              <a [routerLink]="[project.id]" class="action-button details-button">
+                <i class="fas fa-info-circle"></i> Details
+              </a>
+              <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="action-button live-button">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+              <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank"
+                class="action-button github-button">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
           </div>
         </div>
       </div>

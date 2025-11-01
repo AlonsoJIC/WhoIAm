@@ -74,7 +74,7 @@ export class ProjectService {
       const term = searchTerm.toLowerCase().trim();
       const filteredProjects = this.projects.filter(project =>
         project.title?.toLowerCase().includes(term) ||
-        project.technologies?.toLowerCase().includes(term) ||
+        project.technologies?.some(tech => tech.toLowerCase().includes(term)) ||
         project.description?.toLowerCase().includes(term)
       );
 
@@ -98,7 +98,7 @@ export class ProjectService {
 
       const tech = technology.toUpperCase().trim();
       const filteredProjects = this.projects.filter(project =>
-        project.technologies?.toUpperCase().includes(tech)
+        project.technologies?.some(t => t.toUpperCase().includes(tech))
       );
 
       return of(filteredProjects);
