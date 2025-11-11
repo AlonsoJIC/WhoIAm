@@ -187,16 +187,44 @@ export class AppComponent implements OnInit {
         'assets/avatar.svg'
       ];
 
-      // Imágenes de tecnologías principales - Carga secundaria
+      // Imágenes de tecnologías principales - Carga secundaria (prioridad alta)
       const secondaryImages = [
+        'assets/html.svg',
+        'assets/css.svg',
+        'assets/js.svg',
         'assets/ts.svg',
+        'assets/angular.svg',
         'assets/react.svg',
         'assets/node.svg',
-        'assets/nodeL.svg',
         'assets/git.svg',
-        'assets/gitL.svg',
         'assets/bootstrap.svg',
-        'assets/sass.svg'
+        'assets/sass.svg',
+        'assets/astro.svg',
+        'assets/spring.svg',
+        'assets/laravel.svg',
+        'assets/flask.svg',
+        'assets/csharp.svg',
+        'assets/java.svg',
+        'assets/python.svg',
+        'assets/rust.svg',
+        'assets/scrum.svg',
+        'assets/atlassian.svg',
+        'assets/tailwind.svg',
+        'assets/pug.svg',
+        'assets/gsap.svg',
+        'assets/firebase.svg',
+        'assets/databases.svg',
+        'assets/oracle.svg',
+        'assets/docker.svg',
+        'assets/postman.svg',
+        'assets/insomnia.svg',
+        'assets/jwt.svg',
+        'assets/shopify.svg',
+        'assets/wordpress.svg',
+        'assets/adobexd.svg',
+        'assets/figma.svg',
+        'assets/gwd.svg',
+        'assets/aws.svg'
       ];
 
       // Imágenes de proyectos - Lazy loading
@@ -223,40 +251,18 @@ export class AppComponent implements OnInit {
         'assets/tre5.webp'
       ];
 
-      // Iconos adicionales - Lazy loading
+      // Iconos adicionales y variaciones - Lazy loading (carga después)
       const additionalIcons = [
-        'assets/astro.svg',
-        'assets/figma.svg',
-        'assets/adobexd.svg',
-        'assets/aws.svg',
-        'assets/docker.svg',
-        'assets/databases.svg',
-        'assets/gsap.svg',
-        'assets/insomnia.svg',
-        'assets/postman.svg',
-        'assets/java.svg',
-        'assets/net.svg',
-        'assets/pug.svg',
-        'assets/shopify.svg',
-        'assets/tailwind.svg',
-        'assets/wordpress.svg',
-        'assets/jwt.svg',
-        'assets/gwd.svg',
-        'assets/heart.svg',
-        // Nuevas tecnologías
-        'assets/csharp.svg',
-        'assets/rust.svg',
-        'assets/tauri.svg',
-        'assets/python.svg',
+        'assets/nodeL.svg',
+        'assets/gitL.svg',
+        'assets/htmlL.svg',
+        'assets/cssL.svg',
+        'assets/jsL.svg',
+        'assets/angularL.svg',
         'assets/reactL.svg',
-        'assets/atlassian.svg',
-        'assets/firebase.svg',
-        'assets/scrum.svg',
-        'assets/express.svg',
-        'assets/flask.svg',
-        'assets/oracle.svg',
-        'assets/spring.svg',
-        'assets/laravel.svg'
+        'assets/heart.svg',
+        'assets/tauri.svg',
+        'assets/express.svg'
       ];
 
       // Cargar imágenes críticas, secundarias e iconos adicionales inicialmente
