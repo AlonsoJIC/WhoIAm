@@ -24,7 +24,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 0.5rem;
+	
 }
 
 @media only screen and (max-width: 767px) {
@@ -43,7 +43,6 @@
 	.navbar-social {
 		justify-content: center;
 		align-items: center;
-		margin-top: 0.5rem;
 	}
 }
 
@@ -71,7 +70,6 @@
 	}
 	.navbar-social {
 		justify-content: center;
-		margin-top: 0.5rem;
 	}
 }
 .navbar{
