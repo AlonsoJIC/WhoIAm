@@ -181,7 +181,7 @@ export class AppComponent implements OnInit {
     return new Promise((resolve, reject) => {
       // Imágenes críticas - Carga inmediata
       const criticalImages = [
-        'assets/ph1.webp',
+        'assets/1.webp',
         'assets/nombre.webp',
         'assets/bg1.webp',
         'assets/avatar.svg'

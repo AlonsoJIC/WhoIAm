@@ -1,10 +1,10 @@
 <div class="container" id="mainCont">
 
   <div class="row content-wrapper" id="techDiv">
-    <div class="technologies">
+    <div class="technologies mt-5">
       <span>Technologies</span>
     </div>
-    <div *ngFor="let foto of fotos" class="col-3 col-sm-3 col-md-3 col-lg-2" id="techPhotos">
+    <div *ngFor="let foto of fotos" class="tech-item col-sm-3 col-md-3 col-lg-2" id="techPhotos">
       <img [src]="foto.image" alt="Technology icon" loading="eager">
       <div id="techNames">
         <p>{{foto.name}}</p>
