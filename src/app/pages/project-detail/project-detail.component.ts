@@ -23,6 +23,8 @@ export class ProjectDetailComponent implements OnInit {
   isLoading = true;
   hasError = false;
   errorMessage = '';
+  showModal = false;
+  modalImage = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -182,5 +184,22 @@ export class ProjectDetailComponent implements OnInit {
    */
   goToProjects(): void {
     this.router.navigate(['/projects']);
+  }
+
+  /**
+   * Open image modal for full-size view
+   */
+  openImageModal(image: string): void {
+    this.modalImage = image;
+    this.showModal = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  /**
+   * Close image modal
+   */
+  closeImageModal(): void {
+    this.showModal = false;
+    document.body.style.overflow = 'auto';
   }
 }

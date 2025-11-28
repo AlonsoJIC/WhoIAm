@@ -5,7 +5,7 @@
       <span>Technologies</span>
     </div>
     <div *ngFor="let foto of fotos" class="tech-item col-sm-3 col-md-3 col-lg-2" id="techPhotos">
-      <img [src]="foto.image" alt="Technology icon" loading="eager">
+      <img [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="eager" role="img">
       <div id="techNames">
         <p>{{foto.name}}</p>
       </div>

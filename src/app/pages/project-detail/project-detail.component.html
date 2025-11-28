@@ -1,38 +1,135 @@
-<div class="container mt-1">
-  <div class="row" *ngIf="project">
-    <div class="col col-sm-12 col-md-12 col-lg-12" id="project-details">
-      <div>
-        <h1 class="project-title m-3">{{ project.title }}</h1>
-        <button class="backBtn" (click)="goBack()">Go back</button> <!-- Botón para regresar -->
+<!-- Stars Animation -->
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 
-      </div>
+<div class="project-detail-container">
+  <div class="container-fluid" *ngIf="project">
 
+    <!-- Header Section -->
+    <div class="project-header">
+      <button class="back-btn" (click)="goBack()" aria-label="Go back to projects list">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Back to Projects
+      </button>
+      <h1 class="project-title">{{ project.title }}</h1>
+    </div>
 
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-        data-bs-interval="10000">
-        <div class="carousel-inner">
-          <ng-container *ngFor="let image of project.images; let i = index">
-            <div class="carousel-item" [class.active]="image === selectedImage">
+    <!-- Main Content: 2 Column Layout -->
+    <div class="row g-4">
+
+      <!-- Left Column: Gallery -->
+      <div class="col-lg-7">
+        <div class="gallery-section">
+          <!-- Main Image -->
+          <div class="main-image-container">
+            <img [lazyLoad]="selectedImage" [defaultImage]="'assets/placeholder.webp'"
+              [errorImage]="'assets/placeholder.webp'" [alt]="project.title + ' main screenshot'" class="main-image"
+              (click)="openImageModal(selectedImage)">
+          </div>
+
+          <!-- Thumbnail Grid -->
+          <div class="thumbnails-grid" *ngIf="project.images && project.images.length > 1">
+            <div *ngFor="let image of project.images; let i = index" class="thumbnail-wrapper"
+              [class.active]="image === selectedImage" (click)="setSelectedImage(image)" role="button"
+              [attr.aria-label]="'View screenshot ' + (i + 1)" tabindex="0">
               <img [lazyLoad]="image" [defaultImage]="'assets/placeholder.webp'"
-                [errorImage]="'assets/placeholder.webp'" alt="Project screenshot">
+                [errorImage]="'assets/placeholder.webp'" [alt]="'Thumbnail ' + (i + 1)" class="thumbnail-image">
+              <div class="thumbnail-overlay">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </div>
             </div>
-          </ng-container>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row" *ngIf="project && project.images && project.images.length > 1">
-          <!-- VERIFICA SI TIENE ITEMS EL ARRAY PARA MOSTRARSE O NO -->
-          <div class="image-thumbnails ">
-            <img *ngFor="let image of project.images" [lazyLoad]="image" [defaultImage]="'assets/placeholder.webp'"
-              [errorImage]="'assets/placeholder.webp'" alt="Project thumbnail" (click)="setSelectedImage(image)"
-              [class.selected]="image === selectedImage">
           </div>
         </div>
       </div>
 
-      <p class="product-description mt-3">{{ project.description }}</p>
+      <!-- Right Column: Project Info -->
+      <div class="col-lg-5">
+        <div class="info-section">
+
+          <!-- Technologies -->
+          <div class="info-card" *ngIf="project.technologies && project.technologies.length > 0">
+            <h3 class="section-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              Technologies
+            </h3>
+            <div class="tech-badges">
+              <span *ngFor="let tech of project.technologies" class="tech-badge">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="info-card">
+            <h3 class="section-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              About this project
+            </h3>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+              class="btn-action btn-primary" [attr.aria-label]="'View live demo of ' + project.title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              View Live Demo
+            </a>
+            <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
+              class="btn-action btn-secondary"
+              [attr.aria-label]="'View source code for ' + project.title + ' on GitHub'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              View Source Code
+            </a>
+          </div>
+
+        </div>
+      </div>
 
     </div>
+
   </div>
+
+  <!-- Image Modal -->
+  <div class="image-modal" *ngIf="showModal" (click)="closeImageModal()">
+    <button class="modal-close" (click)="closeImageModal()" aria-label="Close image preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img [src]="modalImage" [alt]="project?.title + ' full size screenshot'" class="modal-image"
+      (click)="$event.stopPropagation()">
+  </div>
+
 </div>

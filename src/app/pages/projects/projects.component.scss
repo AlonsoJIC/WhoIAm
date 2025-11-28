@@ -14,7 +14,7 @@ $shadows-medium: multiple-box-shadow(50);
 $shadows-big: multiple-box-shadow(80);
 
 #stars {
-  z-index: 0;
+  z-index: 2;
   position: fixed;
   width: 1px;
   height: 1px;
@@ -32,7 +32,7 @@ $shadows-big: multiple-box-shadow(80);
   }
 }
 #stars2 {
-  z-index: 0;
+  z-index: 2;
   position: fixed;
   width: 2px;
   height: 2px;
@@ -50,7 +50,7 @@ $shadows-big: multiple-box-shadow(80);
   }
 }
 #stars3 {
-  z-index: 0;
+  z-index: 2;
   position: fixed;
   width: 3px;
   height: 3px;
@@ -74,4 +74,12 @@ $shadows-big: multiple-box-shadow(80);
   to {
     transform: translateY(-2000px);
   }
+}
+
+.projects-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+  padding: 2rem 0;
+  overflow: hidden;
 }

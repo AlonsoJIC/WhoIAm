@@ -2,29 +2,32 @@
 <nav class="navbar navbar-expand-lg sticky-top">
 
   <div class="container navbar-center">
-    <div class="navbar-links p-2">
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="home">
+    <nav class="navbar-links p-2" aria-label="Main navigation">
+      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="home"
+        aria-label="Navigate to About Me section">
         <span class="navbarSpan">About me.</span>
       </a>
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="projects">
+      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="projects"
+        aria-label="Navigate to Projects section">
         <span class="navbarSpan">Projects.</span>
       </a>
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="contact">
+      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="contact"
+        aria-label="Navigate to Contact section">
         <span class="navbarSpan">Contact me.</span>
       </a>
-    </div>
-    <div class="navbar-social">
+    </nav>
+    <div class="navbar-social" aria-label="Social media links">
       <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/alonsojic/" target="_blank"
-        role="button">
-        <fa-icon [icon]="faLinkedin"></fa-icon>
+        rel="noopener noreferrer" role="button" aria-label="Visit my LinkedIn profile">
+        <fa-icon [icon]="faLinkedin" aria-hidden="true"></fa-icon>
       </a>
       <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/jalonsojic/" target="_blank"
-        role="button">
-        <fa-icon [icon]="faInstagram"></fa-icon>
+        rel="noopener noreferrer" role="button" aria-label="Visit my Instagram profile">
+        <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
       </a>
       <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AlonsoJIC" target="_blank"
-        role="button">
-        <fa-icon [icon]="faGithub"></fa-icon>
+        rel="noopener noreferrer" role="button" aria-label="Visit my GitHub profile">
+        <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
       </a>
     </div>
   </div>

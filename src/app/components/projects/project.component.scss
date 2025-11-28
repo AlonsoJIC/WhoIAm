@@ -1,5 +1,14 @@
+/* BACKGROUND */
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
 /* DIV PRINCIPAL LETRERO */
 #letter {
+  position: relative;
+  z-index: 1;
   text-align: center;
   align-items: center;
   margin-bottom: 0px;
