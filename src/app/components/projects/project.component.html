@@ -3,8 +3,10 @@
 
     <div class="content-wrapper col-lg-6" *ngFor="let project of project; let i = index">
       <div class="news-card" [class.animate]="true" [style.animation-delay]="i * 0.2 + 's'">
+        <div class="image-skeleton"></div>
         <img [lazyLoad]="project.image" [defaultImage]="'assets/placeholder.webp'" [errorImage]="'assets/error.webp'"
-          [alt]="project.title + ' project preview screenshot'" class="cardImage" loading="lazy">
+          [alt]="project.title + ' project preview screenshot'" class="cardImage"
+          [attr.loading]="i < 4 ? 'eager' : 'lazy'">
         <div class="news-card__text-wrapper">
           <h2 class="news-card__title">{{project.title}}</h2>
           <div class="news-card__tech">
