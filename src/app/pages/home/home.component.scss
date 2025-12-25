@@ -162,4 +162,11 @@ $shadows-big: multiple-box-shadow(80);
   to {
     transform: translateY(-2000px);
   }
-};
+}
+
+/* Disable stars animation on mobile for performance */
+@media (max-width: 768px) {
+  #stars, #stars2, #stars3 {
+    display: none !important;
+  }
+}

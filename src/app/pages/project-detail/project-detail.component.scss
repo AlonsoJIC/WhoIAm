@@ -76,6 +76,13 @@ $shadows-big: multiple-box-shadow(80);
   }
 }
 
+/* Disable stars animation on mobile for performance */
+@media (max-width: 768px) {
+  #stars, #stars2, #stars3 {
+    display: none !important;
+  }
+}
+
 /* PROJECT DETAIL CONTAINER */
 .project-detail-container {
   min-height: 100vh;

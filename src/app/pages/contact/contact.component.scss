@@ -76,6 +76,13 @@ $shadows-big: multiple-box-shadow(80);
   }
 }
 
+/* Disable stars animation on mobile for performance */
+@media (max-width: 768px) {
+  #stars, #stars2, #stars3 {
+    display: none !important;
+  }
+}
+
 .contact-wrapper {
   min-height: 100vh;
   background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
