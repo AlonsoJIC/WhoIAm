@@ -126,7 +126,7 @@ export class ProjectDetailComponent implements OnInit {
       if (this.project) {
         const title = `${this.project.title} - Alonso Jiménez Portfolio`;
         const description = this.project.description || this.project.simpleDescription || 'Project details';
-        const keywords = `${this.project.technologies || ''}, web development, frontend, project`;
+        const keywords = `${this.project.technologies || ''}, web development, full stack, project`;
 
         this.seoService.updatePageSEO(title, description, keywords);
         this.seoService.updateCanonicalUrl(`https://yourwebsite.com/projects/${this.projectId}`);

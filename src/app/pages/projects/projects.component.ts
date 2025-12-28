@@ -29,9 +29,9 @@ export class ProjectsComponent implements OnInit {
     private initializeSEO(): void {
         try {
             this.seoService.updatePageSEO(
-                'Projects - Alonso Jiménez | Frontend Developer Portfolio',
+                'Projects - Alonso Jiménez | Full Stack Developer Portfolio',
                 'Explore my portfolio of web development projects including Angular applications, responsive websites, and modern web solutions. See my work with JavaScript, TypeScript, and various frameworks.',
-                'web development projects, Angular projects, JavaScript, TypeScript, portfolio, responsive design, frontend development'
+                'web development projects, Angular projects, JavaScript, TypeScript, portfolio, responsive design, full stack development'
             );
 
             this.seoService.updateCanonicalUrl('https://yourwebsite.com/projects');

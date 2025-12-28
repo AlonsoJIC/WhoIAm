@@ -1,4 +1,4 @@
-# 🚀 Alonso Jiménez - Frontend Developer Portfolio
+# 🚀 Alonso Jiménez - Systems Engineer & Full Stack Developer Portfolio
 
 A modern, responsive portfolio website showcasing web development skills and projects. Built with Angular and featuring smooth animations, SEO optimization, and comprehensive error handling.
 

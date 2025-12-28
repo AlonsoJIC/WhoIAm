@@ -40,8 +40,8 @@ export class ContactComponent implements OnInit {
         try {
             this.seoService.updatePageSEO(
                 'Contact - Alonso Jiménez | Get in Touch',
-                'Get in touch with Alonso Jiménez, Frontend Developer. Connect via email, WhatsApp, LinkedIn, GitHub, or Instagram for web development projects and opportunities.',
-                'contact developer, hire frontend developer, web development services, Angular developer contact, email, whatsapp'
+                'Get in touch with Alonso Jiménez, Systems Engineer & Full Stack Developer. Connect via email, WhatsApp, LinkedIn, GitHub, or Instagram for web development projects and opportunities.',
+                'contact developer, hire full stack developer, web development services, Angular developer contact, email, whatsapp'
             );
 
             this.seoService.updateCanonicalUrl('https://yourwebsite.com/contact');

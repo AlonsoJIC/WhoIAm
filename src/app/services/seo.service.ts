@@ -113,7 +113,7 @@ export class SeoService {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": personData?.name || SEO_CONFIG.author.name,
-      "jobTitle": personData?.jobTitle || "Frontend Developer",
+      "jobTitle": personData?.jobTitle || "Systems Engineer & Full Stack Developer",
       "url": personData?.url || SEO_CONFIG.author.website,
       "sameAs": personData?.sameAs || SEO_CONFIG.socialProfiles,
       "description": personData?.description || SEO_CONFIG.defaultDescription,
@@ -126,7 +126,7 @@ export class SeoService {
         "Bootstrap",
         "GSAP",
         "Web Development",
-        "Frontend Development"
+        "Full Stack Development"
       ]
     };
 

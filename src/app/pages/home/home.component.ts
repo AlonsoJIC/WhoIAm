@@ -32,9 +32,9 @@ export class HomeComponent implements OnInit {
   private initializeSEO(): void {
     try {
       this.seoService.updatePageSEO(
-        'Alonso Jiménez - Frontend Developer | Angular & Web Development Portfolio',
-        'Frontend Developer specialized in Angular, JavaScript, and responsive web design. Explore my portfolio showcasing modern web applications, innovative projects, and cutting-edge technologies.',
-        'Frontend Developer, Angular Developer, JavaScript, TypeScript, Web Development, Portfolio, GSAP Animations, Responsive Design'
+        'Alonso Jiménez - Systems Engineer & Full Stack Developer | Portfolio',
+        'Systems Engineer and Full Stack Developer specialized in Angular, JavaScript, and modern web technologies. Explore my portfolio showcasing modern web applications, innovative projects, and cutting-edge technologies.',
+        'Systems Engineer, Full Stack Developer, Angular Developer, JavaScript, TypeScript, Web Development, Portfolio, GSAP Animations, Responsive Design'
       );
 
       this.seoService.updateCanonicalUrl('https://yourwebsite.com/home');

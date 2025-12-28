@@ -196,7 +196,9 @@ export const PROJECTS: Project[] = [
   {
     id: 14,
     image: '/assets/guess.webp',
-    images: [],
+    images: [
+      '/assets/guess.webp',
+    ],
     title: 'React Learning Projects',
     technologies: ['React', 'JavaScript'],
     simpleDescription: 'A collection of projects built while learning React and its ecosystem.',

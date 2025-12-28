@@ -7,7 +7,6 @@ import { ImageCacheInterceptor } from './interceptors/image-cache.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -38,7 +37,6 @@ import { SeoService } from './services/seo.service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
     ProjectsComponent,
     HomeComponent,
     ContactComponent,
