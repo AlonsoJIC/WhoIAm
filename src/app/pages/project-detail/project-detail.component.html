@@ -26,8 +26,8 @@
         <div class="gallery-section">
           <!-- Main Image -->
           <div class="main-image-container">
-            <img [lazyLoad]="selectedImage" [defaultImage]="'assets/placeholder.webp'"
-              [errorImage]="'assets/placeholder.webp'" [alt]="project.title + ' main screenshot'" class="main-image"
+            <img [lazyLoad]="selectedImage" [defaultImage]="'assets/placeholder.svg'"
+              [errorImage]="'assets/placeholder.svg'" [alt]="project.title + ' main screenshot'" class="main-image"
               (click)="openImageModal(selectedImage)">
           </div>
 
@@ -36,8 +36,8 @@
             <div *ngFor="let image of project.images; let i = index" class="thumbnail-wrapper"
               [class.active]="image === selectedImage" (click)="setSelectedImage(image)" role="button"
               [attr.aria-label]="'View screenshot ' + (i + 1)" tabindex="0">
-              <img [lazyLoad]="image" [defaultImage]="'assets/placeholder.webp'"
-                [errorImage]="'assets/placeholder.webp'" [alt]="'Thumbnail ' + (i + 1)" class="thumbnail-image">
+              <img [lazyLoad]="image" [defaultImage]="'assets/placeholder.svg'" [errorImage]="'assets/placeholder.svg'"
+                [alt]="'Thumbnail ' + (i + 1)" class="thumbnail-image">
               <div class="thumbnail-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2">
@@ -110,13 +110,14 @@
 
   <!-- Image Modal -->
   <div class="image-modal" *ngIf="showModal" (click)="closeImageModal()">
-    <button class="modal-close" (click)="closeImageModal()" aria-label="Close image preview">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2">
+    <button class="modal-close" (click)="closeImageModal()" aria-label="Close image preview (ESC)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5">
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </button>
+    <span class="modal-esc-hint">Press ESC to close</span>
     <img [src]="modalImage" [alt]="project?.title + ' full size screenshot'" class="modal-image"
       (click)="$event.stopPropagation()">
   </div>

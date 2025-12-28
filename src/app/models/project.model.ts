@@ -7,5 +7,4 @@ export interface Project {
   image: string;
   images?: string[];
   githubUrl?: string;
-  category?: string;
 }

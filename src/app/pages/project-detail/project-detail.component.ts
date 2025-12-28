@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Project } from '../../models/project.model';
@@ -201,5 +201,15 @@ export class ProjectDetailComponent implements OnInit {
   closeImageModal(): void {
     this.showModal = false;
     document.body.style.overflow = 'auto';
+  }
+
+  /**
+   * Listen for ESC key to close modal
+   */
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
+    if (this.showModal) {
+      this.closeImageModal();
+    }
   }
 }
