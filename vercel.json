@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/", "destination": "/api/track/root" },
     { "source": "/portfolio", "destination": "/api/track/portfolio" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|portfolio).*)", "destination": "/index.html" }
   ]
 }
