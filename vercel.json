@@ -8,14 +8,21 @@
       "runtime": "@vercel/node@3.0.0"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/r/:id",
-      "destination": "/api/track/:id"
+      "src": "/r/(.*)",
+      "dest": "/api/track/$1"
     },
     {
-      "source": "/((?!api|r/).*)",
-      "destination": "/index.html"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
