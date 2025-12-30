@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+
 
 // Configuración de Supabase
 const SUPABASE_URL = process.env['SUPABASE_URL'] || '';
@@ -52,7 +52,7 @@ async function saveToSupabase(data: TrackingData): Promise<void> {
   }
 }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+module.exports = async (req, res) => {
   const { id } = req.query;
   const linkId = Array.isArray(id) ? id[0] : id;
 
