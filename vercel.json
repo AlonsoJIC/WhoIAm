@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/api/track/root" },
+    { "source": "", "destination": "/api/track/root" },
     { "source": "/portfolio", "destination": "/api/track/portfolio" },
     { "source": "/((?!api/|portfolio).*)", "destination": "/index.html" }
   ]
