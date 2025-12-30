@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/home", "destination": "/api/track/home" },
-    { "source": "/((?!api/|home).*)", "destination": "/index.html" }
+    { "source": "/portfolio", "destination": "/api/track/portfolio" },
+    { "source": "/((?!api/|portfolio).*)", "destination": "/index.html" }
   ]
 }
