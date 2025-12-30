@@ -1,6 +1,11 @@
 
 
 // Configuración de Supabase
+
+/**
+ * @param {import('http').IncomingMessage} req
+ * @param {import('http').ServerResponse} res
+ */
 const SUPABASE_URL = process.env['SUPABASE_URL'] || '';
 const SUPABASE_ANON_KEY = process.env['SUPABASE_ANON_KEY'] || '';
 
