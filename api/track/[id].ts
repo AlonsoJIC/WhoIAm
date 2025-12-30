@@ -13,11 +13,10 @@ const UAParser = require('ua-parser-js');
 
 // Mapa de códigos a URLs destino
 const REDIRECT_URLS: Record<string, string> = {
-  // Agrega tus enlaces aquí
-  // 'codigo': 'https://url-destino.com'
-  'portfolio': 'https://dev-alonso.vercel.app',
-  'github': 'https://github.com/tuusuario',
-  'linkedin': 'https://linkedin.com/in/tuusuario',
+  root: 'https://dev-alonso.vercel.app',
+  portfolio: 'https://dev-alonso.vercel.app',
+  github: 'https://github.com/tuusuario',
+  linkedin: 'https://linkedin.com/in/tuusuario',
   // Puedes agregar más...
 };
 
