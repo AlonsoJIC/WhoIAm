@@ -6,8 +6,10 @@
  * @param {import('http').IncomingMessage} req
  * @param {import('http').ServerResponse} res
  */
+
 const SUPABASE_URL = process.env['SUPABASE_URL'] || '';
 const SUPABASE_ANON_KEY = process.env['SUPABASE_ANON_KEY'] || '';
+const UAParser = require('ua-parser-js');
 
 // Mapa de códigos a URLs destino
 const REDIRECT_URLS: Record<string, string> = {
@@ -19,10 +21,14 @@ const REDIRECT_URLS: Record<string, string> = {
   // Puedes agregar más...
 };
 
+
 interface TrackingData {
   link_id: string;
   ip: string | null;
   user_agent: string | null;
+  browser: string | null;
+  os: string | null;
+  device: string | null;
   referer: string | null;
   country: string | null;
   city: string | null;
@@ -73,18 +79,24 @@ module.exports = async (req, res) => {
   }
 
   // Extraer información del visitante
+
+  const userAgent = req.headers['user-agent'] || '';
+  const ua = UAParser(userAgent);
+
   const trackingData: TrackingData = {
     link_id: linkId,
-    ip: (req.headers['x-forwarded-for'] as string)?.split(',')[0] ||
-      (req.headers['x-real-ip'] as string) ||
+    ip: (req.headers['x-forwarded-for']?.split(',')[0]) ||
+      req.headers['x-real-ip'] ||
       req.socket?.remoteAddress ||
       null,
-    user_agent: req.headers['user-agent'] || null,
+    user_agent: userAgent,
+    browser: ua.browser?.name ? `${ua.browser.name} ${ua.browser.version || ''}` : null,
+    os: ua.os?.name ? `${ua.os.name} ${ua.os.version || ''}` : null,
+    device: ua.device?.type ? `${ua.device.type} ${ua.device.vendor || ''} ${ua.device.model || ''}` : 'Desktop',
     referer: req.headers['referer'] || null,
-    // Vercel proporciona estos headers automáticamente
-    country: req.headers['x-vercel-ip-country'] as string || null,
-    city: req.headers['x-vercel-ip-city'] as string || null,
-    region: req.headers['x-vercel-ip-country-region'] as string || null,
+    country: req.headers['x-vercel-ip-country'] || null,
+    city: req.headers['x-vercel-ip-city'] || null,
+    region: req.headers['x-vercel-ip-country-region'] || null,
     timestamp: new Date().toISOString(),
     destination_url: destinationUrl
   };
