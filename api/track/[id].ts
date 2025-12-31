@@ -77,19 +77,34 @@ module.exports = async (req, res) => {
   }
 
   // Extraer información del visitante
-
   const userAgent = req.headers['user-agent'] || '';
-  isp,
-    org,
-    asn
   const ua = UAParser(userAgent);
+
+  // Obtener IP
+  const ip = (req.headers['x-forwarded-for']?.split(',')[0]) ||
+    req.headers['x-real-ip'] ||
+    req.socket?.remoteAddress ||
+    null;
+
+  // Consultar ipapi.co para ISP, ORG y ASN
+  let isp = null, org = null, asn = null;
+  if (ip) {
+    try {
+      const geoRes = await fetch(`https://ipapi.co/${ip}/json/`);
+      if (geoRes.ok) {
+        const geo = await geoRes.json();
+        isp = geo.org || null;
+        org = geo.org || null;
+        asn = geo.asn || null;
+      }
+    } catch (err) {
+      console.error('ipapi.co error:', err);
+    }
+  }
 
   const trackingData: TrackingData = {
     link_id: linkId,
-    ip: (req.headers['x-forwarded-for']?.split(',')[0]) ||
-      req.headers['x-real-ip'] ||
-      req.socket?.remoteAddress ||
-      null,
+    ip,
     user_agent: userAgent,
     browser: ua.browser?.name ? `${ua.browser.name} ${ua.browser.version || ''}` : null,
     os: ua.os?.name ? `${ua.os.name} ${ua.os.version || ''}` : null,
@@ -99,7 +114,10 @@ module.exports = async (req, res) => {
     city: req.headers['x-vercel-ip-city'] || null,
     region: req.headers['x-vercel-ip-country-region'] || null,
     timestamp: new Date().toISOString(),
-    destination_url: destinationUrl
+    destination_url: destinationUrl,
+    isp,
+    org,
+    asn
   };
 
   // Guardar en Supabase (async, no bloquea el redirect)
