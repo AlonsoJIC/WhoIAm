@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { TrackingTableComponent } from './pages/tracking-table/tracking-table.component';
 
 
 
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'projects/:id',
     component: ProjectDetailComponent
+  },
+  {
+    path: 'tracking-table',
+    component: TrackingTableComponent
   },
   {
     path: '',
