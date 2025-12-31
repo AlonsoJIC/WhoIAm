@@ -80,11 +80,10 @@ module.exports = async (req, res) => {
   const userAgent = req.headers['user-agent'] || '';
   const ua = UAParser(userAgent);
 
-  // Obtener IP
-  const ip = (req.headers['x-forwarded-for']?.split(',')[0]) ||
-    req.headers['x-real-ip'] ||
-    req.socket?.remoteAddress ||
-    null;
+  // Obtener IP pública (descarta IPs locales)
+  let ip = (req.headers['x-forwarded-for']?.split(',')[0]) || req.headers['x-real-ip'] || req.socket?.remoteAddress || null;
+  if (ip && (ip.startsWith('::ffff:'))) ip = ip.replace('::ffff:', '');
+  if (ip && (ip === '127.0.0.1' || ip === '::1' || ip.startsWith('192.168.') || ip.startsWith('10.') || ip.startsWith('172.'))) ip = null;
 
   // Consultar ipapi.co para ISP, ORG y ASN
   let isp = null, org = null, asn = null;
@@ -93,8 +92,8 @@ module.exports = async (req, res) => {
       const geoRes = await fetch(`https://ipapi.co/${ip}/json/`);
       if (geoRes.ok) {
         const geo = await geoRes.json();
-        isp = geo.org || null;
         org = geo.org || null;
+        isp = geo.org || null;
         asn = geo.asn || null;
       }
     } catch (err) {
