@@ -30,6 +30,9 @@ interface TrackingData {
   region: string | null;
   timestamp: string;
   destination_url: string;
+  isp: string | null;
+  org: string | null;
+  asn: string | null;
 }
 
 async function saveToSupabase(data: TrackingData): Promise<void> {
@@ -76,6 +79,9 @@ module.exports = async (req, res) => {
   // Extraer información del visitante
 
   const userAgent = req.headers['user-agent'] || '';
+  isp,
+    org,
+    asn
   const ua = UAParser(userAgent);
 
   const trackingData: TrackingData = {
