@@ -2,6 +2,20 @@ import { Project } from './project.model'
 
 export const PROJECTS: Project[] = [
   {
+    id: 15,
+    image: '/assets/tcd0.webp',
+    images: [
+      '/assets/tcd1.webp',
+      '/assets/tcd2.webp',
+      '/assets/tcd3.webp',
+    ],
+    title: 'Tracked',
+    technologies: ['Angular', 'Supabase'],
+    simpleDescription: 'Application for tracking IPs, domains, agents, countries, and more in real-time. All from the persons that visit your website.',
+    description: 'This project is a web application that allows users to track various data points such as IP addresses, domains, user agents, countries, and more in real-time. It is designed to help website owners monitor and analyze the traffic visiting their sites. The application is built using Angular for the frontend and Supabase for the backend, providing a seamless and efficient user experience. Also you could try the demo https://tracked2026.vercel.app/',
+    githubUrl: 'https://github.com/AlonsoJIC/Tracked'
+  },
+  {
     id: 1,
     image: '/assets/cg1.webp',
     images: [
