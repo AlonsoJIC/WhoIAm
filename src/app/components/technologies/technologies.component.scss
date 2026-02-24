@@ -5,8 +5,9 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: -4px;
+  letter-spacing: -0.05em;
   font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.2;
   background: linear-gradient(-45deg, #d1f9f9, #e4fdfd, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;

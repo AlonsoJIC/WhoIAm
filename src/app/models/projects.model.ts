@@ -1,6 +1,21 @@
 import { Project } from './project.model'
 
 export const PROJECTS: Project[] = [
+
+  {
+    id: 16,
+    image: '/assets/ss1.webp',
+    images: [
+      '/assets/ss1.webp',
+      '/assets/ss2.webp',
+      '/assets/ss3.webp',
+    ],
+    title: 'SecureSight',
+    technologies: ['Angular', 'Python', 'FastAPI', 'Security'],
+    simpleDescription: 'A comprehensive security monitoring and surveillance platform for real-time threat detection and analysis.',
+    description: 'SecureSight is a modern security monitoring application designed to provide real-time visibility and control over your infrastructure. Built with Angular and TypeScript for the frontend, and Python with FastAPI for the backend, it offers advanced features for threat detection, system monitoring, and security analytics. The platform enables users to track security events, analyze patterns, and respond quickly to potential threats.',
+    githubUrl: 'https://github.com/AlonsoJIC/SecureSight'
+  },
   {
     id: 15,
     image: '/assets/tcd0.webp',
@@ -218,4 +233,5 @@ export const PROJECTS: Project[] = [
     simpleDescription: 'A collection of projects built while learning React and its ecosystem.',
     description: 'Currently learning about how to use React and its libraries. This project includes various exercises and small applications to practice React concepts like hooks, state management, and component architecture.'
   },
+
 ]

@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
         whatsapp: '1234567890', // Actualiza con tu número de WhatsApp
         github: 'https://github.com/AlonsoJIC',
         linkedin: 'https://www.linkedin.com/in/alonsojic/',
-        instagram: 'https://www.instagram.com/jalonsojic/'
+        instagram: 'https://www.instagram.com/alonsojic/'
     };
 
     constructor(

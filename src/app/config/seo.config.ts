@@ -28,7 +28,7 @@ export const SEO_CONFIG = {
   socialProfiles: [
     'https://www.linkedin.com/in/alonsojic/',
     'https://github.com/AlonsoJIC',
-    'https://www.instagram.com/jalonsojic/',
+    'https://www.instagram.com/alonsojic/',
     'https://www.facebook.com/alonsojic/'
   ]
 };
