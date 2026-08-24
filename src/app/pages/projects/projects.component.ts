@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
                 'web development projects, Angular projects, JavaScript, TypeScript, portfolio, responsive design, full stack development'
             );
 
-            this.seoService.updateCanonicalUrl('https://yourwebsite.com/projects');
+            this.seoService.updateCanonicalUrl('/projects');
         } catch (error) {
             this.errorHandler.handleError(error, 'Projects page SEO initialization');
         }

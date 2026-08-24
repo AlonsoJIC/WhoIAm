@@ -4,6 +4,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 16,
+    category: 'personal',
     image: '/assets/ss1.webp',
     images: [
       '/assets/ss1.webp',
@@ -18,6 +19,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 15,
+    category: 'personal',
     image: '/assets/tcd0.webp',
     images: [
       '/assets/tcd1.webp',
@@ -32,6 +34,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 1,
+    category: 'personal',
     image: '/assets/cg1.webp',
     images: [
       '/assets/cg1.webp',
@@ -48,6 +51,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
+    category: 'personal',
     image: '/assets/tre1.webp',
     images: [
       '/assets/tre1.webp',
@@ -64,6 +68,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
+    category: 'professional-client',
     image: '/assets/gp1.webp',
     images: [
       '/assets/gp1.webp',
@@ -78,6 +83,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
+    category: 'professional-client',
     image: '/assets/emp1.webp',
     images: [
       '/assets/emp1.webp',
@@ -93,6 +99,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 5,
+    category: 'personal',
     image: '/assets/Tesla1.webp',
     images: [
       '/assets/Tesla1.webp',
@@ -108,6 +115,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 6,
+    category: 'personal',
     image: '/assets/lg5.webp',
     images: [
       '/assets/lg1.webp',
@@ -124,6 +132,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 7,
+    category: 'personal',
     image: '/assets/P2-1.webp',
     images: [
       '/assets/P2-1.webp',
@@ -140,6 +149,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 8,
+    category: 'personal',
     image: '/assets/P3-1.webp',
     images: [
       '/assets/P3-1.webp',
@@ -155,6 +165,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 9,
+    category: 'personal',
     image: '/assets/td1.webp',
     images: [
       '/assets/td1.webp',
@@ -171,6 +182,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 10,
+    category: 'personal',
     image: '/assets/lb0.webp',
     images: [
       '/assets/lb0.webp',
@@ -186,6 +198,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 11,
+    category: 'professional-client',
     image: '/assets/gpr1.webp',
     images: [
       '/assets/gpr1.webp',
@@ -199,6 +212,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 12,
+    category: 'professional-client',
     image: '/assets/qg1.webp',
     images: [
       '/assets/qg1.webp',
@@ -210,6 +224,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 13,
+    category: 'professional-client',
     image: '/assets/ja1.webp',
     images: [
       '/assets/ja1.webp',
@@ -224,6 +239,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 14,
+    category: 'personal',
     image: '/assets/guess.webp',
     images: [
       '/assets/guess.webp',
@@ -232,6 +248,170 @@ export const PROJECTS: Project[] = [
     technologies: ['React', 'JavaScript'],
     simpleDescription: 'A collection of projects built while learning React and its ecosystem.',
     description: 'Currently learning about how to use React and its libraries. This project includes various exercises and small applications to practice React concepts like hooks, state management, and component architecture.'
+  },
+  {
+    id: 17,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Tolaria - Trading Card Marketplace',
+    technologies: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'Divi'],
+    simpleDescription: 'Multi-vendor marketplace for Magic: The Gathering and Pokemon trading cards.',
+    description: 'I owned the delivery of Tolaria from an empty theme to an operational e-commerce platform. I structured the site with Divi, built category and attribute-based product discovery, created reusable product layouts, and implemented seller and administrator workflows, product moderation, registration, and login with custom PHP. I also integrated the Onvopay payment gateway, developed an AJAX cart, and optimized key graphics by moving them to SVG.',
+    liveUrl: 'https://tolariacr.com/',
+    clientName: 'Tolaria'
+  },
+  {
+    id: 18,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Lago & Sarmiento - Corporate Website',
+    technologies: ['WordPress', 'ACF', 'PHP', 'Divi'],
+    simpleDescription: 'Self-manageable corporate website with structured content architecture.',
+    description: 'I led the end-to-end build of Lago & Sarmiento, translating the brand manual into a structured WordPress platform. I created custom post types and Advanced Custom Fields for courses, news, workshops, and resources, allowing the client to manage content independently. I also developed a custom events carousel and implemented the site visual identity, contact channels, maps, and institutional pages.',
+    clientName: 'Lago & Sarmiento'
+  },
+  {
+    id: 19,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Camara de Industrias de Costa Rica - Data Migration',
+    technologies: ['Web Scraping', 'WordPress', 'CSV', 'Divi'],
+    simpleDescription: 'Automated migration of 707 association member records and large-scale content publishing.',
+    description: 'I replaced a planned manual data-entry process with an extraction pipeline that scraped the source data, generated a clean CSV, and bulk-imported 707 association records. I also published and formatted 550 forum posts with WebP-optimized imagery, reducing repetitive work and the risk of transcription errors.',
+    clientName: 'Camara de Industrias de Costa Rica'
+  },
+  {
+    id: 20,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Salud en Linea - E-commerce Maintenance',
+    technologies: ['WordPress', 'WooCommerce', 'Divi'],
+    simpleDescription: 'Content, product catalog, theme-template fixes, and platform maintenance for an online store.',
+    description: 'I worked across editorial content, catalog architecture, and platform reliability for Salud en Linea. I rebuilt the product taxonomy, republished the inventory, fixed a Divi Theme Builder conflict, and completed backups, WordPress and plugin updates, dependency-conflict resolution, and security hardening.',
+    liveUrl: 'https://saludenlineacr.shop/',
+    clientName: 'Salud en Linea'
+  },
+  {
+    id: 21,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Simtec Equipo Medico - Functional Improvements',
+    technologies: ['JavaScript', 'jQuery', 'WordPress', 'Divi'],
+    simpleDescription: 'Custom contact-routing and navigation improvements for a medical equipment website.',
+    description: 'I built a custom JavaScript and jQuery solution that split sales and technical-support inquiries through the existing contact widget, avoiding a paid plugin upgrade. I also replaced a broken Waze redirect with a Google Maps integration that opens the visitor navigation app, and standardized typography and imagery across the site.',
+    liveUrl: 'https://simteccr.com/',
+    clientName: 'Simtec Equipo Medico'
+  },
+  {
+    id: 22,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Escojisa CR - Site Redesign',
+    technologies: ['WordPress', 'CSS', 'HTML', 'Divi'],
+    simpleDescription: 'Responsive redesign and visual standardization based on iterative client reviews.',
+    description: 'I drove a multi-round redesign of Escojisa CR, improving typography, color contrast, responsive layouts, footer structure, buttons, social integrations, and project imagery. I also migrated key icons to SVG and translated live client feedback into shipped visual and content updates.',
+    liveUrl: 'https://escojisacr.com/',
+    clientName: 'Escojisa CR'
+  },
+  {
+    id: 23,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Fundacion Piedad - Institutional Website',
+    technologies: ['WordPress', 'Divi'],
+    simpleDescription: 'Institutional website foundation for a nonprofit organization.',
+    description: 'I led the first build phase of the foundation website, using the client brief and competitive analysis to create the organization presentation, history, and affiliated-schools sections.',
+    clientName: 'Fundacion Piedad'
+  },
+  {
+    id: 24,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'SIBOWAK - Institutional Website',
+    technologies: ['WordPress', 'Divi'],
+    simpleDescription: 'Foundational architecture and global design system for an institutional website.',
+    description: 'I built the foundational architecture for SIBOWAK across six business areas: organization, wellness, culture, home, products, and business. I also established the base template and global Divi style system used by later build phases.',
+    liveUrl: 'https://sibowak.cr/',
+    clientName: 'SIBOWAK'
+  },
+  {
+    id: 25,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Esfera Latam - UX and Visual Redesign',
+    technologies: ['WordPress', 'CSS', 'Divi'],
+    simpleDescription: 'Homepage redesign focused on content flow, calls to action, and visual consistency.',
+    description: 'I led an ongoing UX and visual redesign of Esfera Latam\'s homepage, restructuring content for readability, adding calls to action, standardizing information cards, and aligning the palette, typography, and graphic components with the brand guidelines.',
+    liveUrl: 'https://esferalatam.com/',
+    clientName: 'Esfera Latam'
+  },
+  {
+    id: 26,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Girasol Gatuno - Visual Identity Redesign',
+    technologies: ['WordPress', 'CSS', 'Divi'],
+    simpleDescription: 'Responsive visual refresh with updated typography, imagery, navigation, and graphic components.',
+    description: 'I led a visual identity refresh for Girasol Gatuno, reworking global typography, imagery, buttons, navigation links, CSS effects, and graphic components. I finished with responsive QA across mobile and desktop layouts.',
+    liveUrl: 'https://girasolgatuno.com/',
+    clientName: 'Girasol Gatuno'
+  },
+  {
+    id: 27,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Ecole Travel - Content and Site Maintenance',
+    technologies: ['WordPress', 'Divi'],
+    simpleDescription: 'Ongoing blog and homepage maintenance with responsive content improvements.',
+    description: 'I managed content and design updates for Ecole Travel, including author attribution, Instagram integration, homepage hero copy and imagery, and logo upscaling for sharper high-density display. I verified the changes through responsive QA.',
+    liveUrl: 'https://ecoletravel.com/',
+    clientName: 'Ecole Travel'
+  },
+  {
+    id: 28,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'El Maestro en Casa - Academic Content Architecture',
+    technologies: ['WordPress', 'Divi'],
+    simpleDescription: 'Academic content audit and structure redesign for a distance-learning platform.',
+    description: 'I audited and reorganized academic content, removed duplicated shared materials, designed a new structure for the 11th-grade Biology curriculum, and identified resource gaps for follow-up planning.',
+    clientName: 'El Maestro en Casa'
+  },
+  {
+    id: 29,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'MundoGluck - About Us Redesign',
+    technologies: ['WordPress', 'CSS', 'Divi'],
+    simpleDescription: 'Responsive redesign of an About Us section through two rounds of client feedback.',
+    description: 'I replaced an outdated carousel layout with a cleaner responsive template, refined copy and visual hierarchy through client feedback, and improved spacing, alignment, and social-media placement.',
+    liveUrl: 'https://mundogluck.com/',
+    clientName: 'MundoGluck'
+  },
+  {
+    id: 30,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Esteban Bogantes - Content and Visual Redesign',
+    technologies: ['WordPress', 'CSS', 'Divi'],
+    simpleDescription: 'Informational-page redesign with updated content, imagery, and visual consistency.',
+    description: 'I redesigned a key informational page by replacing imagery, rewriting headings and subheadings within the defined color palette, and adjusting graphic elements to match the rest of the site.',
+    liveUrl: 'https://estebanbogantes.com/',
+    clientName: 'Esteban Bogantes'
   },
 
 ]

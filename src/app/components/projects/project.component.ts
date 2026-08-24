@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import { ErrorHandlerService } from '../../services/error-handler.service';
+import { Project, ProjectCategory } from '../../models/project.model';
 
 /**
  * Project component - Displays all projects in a grid layout
@@ -13,7 +14,8 @@ import { ErrorHandlerService } from '../../services/error-handler.service';
   standalone: false
 })
 export class ProjectComponent implements OnInit {
-  project: any[] = [];
+  project: Project[] = [];
+  selectedCategory: 'all' | ProjectCategory = 'all';
   isLoading = true;
   hasError = false;
   errorMessage = '';
@@ -58,6 +60,18 @@ export class ProjectComponent implements OnInit {
    */
   retryLoadProjects(): void {
     this.loadProjects();
+  }
+
+  get filteredProjects(): Project[] {
+    if (this.selectedCategory === 'all') {
+      return this.project;
+    }
+
+    return this.project.filter(project => project.category === this.selectedCategory);
+  }
+
+  setCategory(category: 'all' | ProjectCategory): void {
+    this.selectedCategory = category;
   }
 
   /**

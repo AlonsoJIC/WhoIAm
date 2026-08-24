@@ -1,7 +1,19 @@
 <div class="container projects-container">
+  <div class="project-filters" role="group" aria-label="Filter projects by category">
+    <button type="button" [class.active]="selectedCategory === 'all'" (click)="setCategory('all')">
+      All Projects
+    </button>
+    <button type="button" [class.active]="selectedCategory === 'personal'" (click)="setCategory('personal')">
+      Engineering Projects
+    </button>
+    <button type="button" [class.active]="selectedCategory === 'professional-client'"
+      (click)="setCategory('professional-client')">
+      Professional Client Work
+    </button>
+  </div>
   <div class="row">
 
-    <div class="content-wrapper col-lg-6" *ngFor="let project of project; let i = index">
+    <div class="content-wrapper col-lg-6" *ngFor="let project of filteredProjects; let i = index">
       <div class="news-card" [class.animate]="true" [style.animation-delay]="i * 0.2 + 's'">
         <div class="image-skeleton"></div>
         <img [lazyLoad]="project.image" [defaultImage]="'assets/placeholder.svg'"
@@ -24,6 +36,10 @@
                   <line x1="12" y1="8" x2="12.01" y2="8"></line>
                 </svg>
                 View Details
+              </a>
+              <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+                class="action-button live-button" [attr.aria-label]="'Visit ' + project.title + ' live site'">
+                Visit Live Site
               </a>
               <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
                 class="action-button github-button"

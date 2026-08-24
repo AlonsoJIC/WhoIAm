@@ -2,17 +2,17 @@
 
 A modern, responsive portfolio website showcasing web development skills and projects. Built with Angular and featuring smooth animations, SEO optimization, and comprehensive error handling.
 
-![Portfolio Preview](assets/fotoPerfil.webp)
+![Portfolio Preview](src/assets/1.webp)
 
 ## ✨ Features
 
 - **🎨 Modern Design**: Clean, professional interface with dark theme
 - **📱 Fully Responsive**: Mobile-first design that works on all devices
 - **🎭 Smooth Animations**: GSAP-powered scroll animations and transitions
-- **🔍 SEO Optimized**: Dynamic meta tags, structured data, and social media optimization
+- **🔍 SEO Optimized**: Dynamic meta tags, structured data, and social media metadata
 - **⚡ Performance Focused**: Progressive loading, image optimization, and lazy loading
 - **🛡️ Error Resilient**: Comprehensive error handling with graceful fallbacks
-- **♿ Accessible**: WCAG compliant with proper semantic structure
+- **♿ Accessible**: Semantic structure, labels, and keyboard-focused controls
 
 ## 🛠️ Technology Stack
 
@@ -105,7 +105,8 @@ src/
 ### 💼 Projects Section
 - **Project Grid**: Responsive card-based layout
 - **Detailed Views**: Individual project pages with galleries
-- **Technology Filtering**: Filter projects by tech stack
+- **Category Filtering**: Separate engineering projects from professional client work
+- **Live Site Links**: Visit published client projects when a URL is available
 - **Interactive Elements**: Hover effects and smooth transitions
 
 ### 🔍 SEO & Performance
@@ -154,17 +155,8 @@ npm run build
 # Run unit tests
 npm test
 
-# Run tests in watch mode
-npm run test:watch
-
 # Build with file watching
 npm run watch
-
-# Lint code
-npm run lint
-
-# Format code
-npm run format
 ```
 
 ### Development Guidelines
@@ -175,12 +167,6 @@ npm run format
 4. **Performance**: Optimize for Core Web Vitals
 5. **Accessibility**: Maintain WCAG compliance
 6. **Testing**: Write unit tests for components and services
-
-## 📖 Documentation
-
-- **[Complete Documentation](DOCUMENTATION.md)** - Comprehensive project guide
-- **[API Documentation](API_DOCUMENTATION.md)** - Service interfaces and methods
-- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment instructions
 
 ## 🔍 SEO Features
 
@@ -208,13 +194,6 @@ npm run format
 - **Safari** 14+
 - **Edge** 90+
 - **Mobile browsers** (iOS Safari, Chrome Mobile)
-
-## 📊 Performance Metrics
-
-- **Lighthouse Score**: 95+ (Performance, Accessibility, SEO)
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
 
 ## 🚀 Deployment
 
@@ -269,7 +248,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Alonso Jiménez**
 - **GitHub**: [@AlonsoJIC](https://github.com/AlonsoJIC)
 - **LinkedIn**: [alonsojic](https://www.linkedin.com/in/alonsojic/)
-- **Portfolio**: [yourwebsite.com](https://yourwebsite.com)
+- **Portfolio**: [alonsojic.github.io/WhoIAm](https://alonsojic.github.io/WhoIAm)
 
 ## 🙏 Acknowledgments
 

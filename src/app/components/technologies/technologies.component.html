@@ -1,15 +1,26 @@
 <div class="container" id="mainCont">
-
-  <div class="row content-wrapper" id="techDiv">
-    <div class="technologies mt-5">
-      <span>Technologies</span>
+  <div class="content-wrapper" id="techDiv">
+    <div class="technologies">
+      <span>Technical toolkit</span>
+      <p>Tools I use to build interfaces, services, content platforms, and reliable delivery workflows.</p>
     </div>
-    <div *ngFor="let foto of fotos" class="tech-item col-sm-3 col-md-3 col-lg-2" id="techPhotos">
-      <img [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="eager" role="img">
-      <div id="techNames">
-        <p>{{foto.name}}</p>
+
+    <div class="toolkit-panel">
+      <div class="technology-group"
+        *ngFor="let category of ['languages', 'frontend', 'backend', 'cms', 'infrastructure', 'tools']">
+        <h3>{{ category === 'languages' ? 'Languages' : category === 'frontend' ? 'Frontend' : category === 'backend' ?
+          'Backend' : category === 'cms' ? 'CMS & Web Platforms' : category === 'infrastructure' ? 'Data &
+          Infrastructure' : 'Tools & Practices' }}</h3>
+        <div class="technology-grid">
+          <div *ngFor="let foto of fotos" class="tech-item" [hidden]="foto.category !== category">
+            <div class="tech-icon" [class.text-icon]="!foto.image">
+              <img *ngIf="foto.image" [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="lazy">
+              <span *ngIf="!foto.image" aria-hidden="true">{{ foto.name.charAt(0) }}</span>
+            </div>
+            <p>{{ foto.name }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 </div>

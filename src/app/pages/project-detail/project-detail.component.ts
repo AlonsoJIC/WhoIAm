@@ -129,10 +129,10 @@ export class ProjectDetailComponent implements OnInit {
         const keywords = `${this.project.technologies || ''}, web development, full stack, project`;
 
         this.seoService.updatePageSEO(title, description, keywords);
-        this.seoService.updateCanonicalUrl(`https://yourwebsite.com/projects/${this.projectId}`);
+        this.seoService.updateCanonicalUrl(`/projects/${this.projectId}`);
 
         if (this.project.image) {
-          this.seoService.updateOGImage(`https://yourwebsite.com/${this.project.image}`);
+          this.seoService.updateOGImage(this.project.image);
         }
       }
     } catch (error) {

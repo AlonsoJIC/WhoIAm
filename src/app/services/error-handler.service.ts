@@ -142,21 +142,6 @@ export class ErrorHandlerService {
   }
 
   /**
-   * Validates if a resource (image, font, etc.) is accessible
-   * @param url - URL of the resource to validate
-   * @returns Promise that resolves to true if accessible, false otherwise
-   */
-  async validateResource(url: string): Promise<boolean> {
-    try {
-      const response = await fetch(url, { method: 'HEAD' });
-      return response.ok;
-    } catch (error) {
-      this.logError(error, `Resource validation failed for: ${url}`);
-      return false;
-    }
-  }
-
-  /**
    * Gracefully handles image loading errors
    * @param imgElement - The image element that failed to load
    * @param fallbackSrc - Optional fallback image source

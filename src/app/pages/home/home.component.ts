@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
         'Systems Engineer, Full Stack Developer, Angular Developer, JavaScript, TypeScript, Web Development, Portfolio, GSAP Animations, Responsive Design'
       );
 
-      this.seoService.updateCanonicalUrl('https://yourwebsite.com/home');
+      this.seoService.updateCanonicalUrl('/home');
     } catch (error) {
       this.errorHandler.handleError(error, 'Home page SEO initialization');
     }
@@ -94,14 +94,15 @@ export class HomeComponent implements OnInit {
           { yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor) },
           { yPercent: 0 },
           0
-        )
-          .fromTo(
-            images[index],
-            { yPercent: 15 * dFactor },
-            { yPercent: 0 },
-            0
-          )
-          .fromTo(
+        ).fromTo(
+          images[index],
+          { yPercent: 15 * dFactor },
+          { yPercent: 0 },
+          0
+        );
+
+        if (headings[index]) {
+          tl.fromTo(
             headings[index],
             { autoAlpha: 0, yPercent: 150 * dFactor },
             {
@@ -116,6 +117,7 @@ export class HomeComponent implements OnInit {
             },
             0.2
           );
+        }
         currentIndex = index;
       }
 

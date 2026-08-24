@@ -16,9 +16,9 @@ export class ContactComponent implements OnInit {
 
     // Contact information
     contactInfo = {
-        email: 'alonsojic@example.com', // Actualiza con tu email real
-        phone: '+1234567890', // Actualiza con tu número real
-        whatsapp: '1234567890', // Actualiza con tu número de WhatsApp
+        email: 'jalonsojic@gmail.com',
+        phone: '+506 6395 7916',
+        whatsapp: '+506 6395 7916',
         github: 'https://github.com/AlonsoJIC',
         linkedin: 'https://www.linkedin.com/in/alonsojic/',
         instagram: 'https://www.instagram.com/alonsojic/'
@@ -44,7 +44,7 @@ export class ContactComponent implements OnInit {
                 'contact developer, hire full stack developer, web development services, Angular developer contact, email, whatsapp'
             );
 
-            this.seoService.updateCanonicalUrl('https://yourwebsite.com/contact');
+            this.seoService.updateCanonicalUrl('/contact');
         } catch (error) {
             this.errorHandler.handleError(error, 'Contact page SEO initialization');
         }

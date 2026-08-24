@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ImageCacheInterceptor } from './interceptors/image-cache.interceptor';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,14 +20,6 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail.co
 import { AboutProjectsComponent } from './components/about-projects/about-projects.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
-import { TrackingTableComponent } from './pages/tracking-table/tracking-table.component';
-
-// Angular Material imports
-import { MatTableModule } from '@angular/material/table';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
 
 // Import services for DI
 import { ErrorHandlerService } from './services/error-handler.service';
@@ -42,13 +33,7 @@ import { SeoService } from './services/seo.service';
     HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
-    LazyLoadImageModule,
-    MatTableModule,
-    MatProgressBarModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatSortModule,
-    FormsModule
+    LazyLoadImageModule
   ],
   declarations: [
     AppComponent,
@@ -63,8 +48,7 @@ import { SeoService } from './services/seo.service';
     ProjectComponent,
     ProjectDetailComponent,
     ButtonComponent,
-    ContactMeComponent,
-    TrackingTableComponent
+    ContactMeComponent
   ],
   providers: [
     {

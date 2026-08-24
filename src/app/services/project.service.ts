@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PROJECTS } from './../models/projects.model';
+import { Project } from '../models/project.model';
 import { ErrorHandlerService } from './error-handler.service';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -21,7 +22,7 @@ export class ProjectService {
    * Retrieves all projects from the data source
    * @returns Observable<any[]> Array of all projects with error handling
    */
-  getAllProducts(): Observable<any[]> {
+  getAllProducts(): Observable<Project[]> {
     try {
       if (!this.projects || this.projects.length === 0) {
         console.warn('No projects found in data source');
@@ -39,7 +40,7 @@ export class ProjectService {
    * @param id - The unique identifier of the project
    * @returns Observable<any> The project object if found, null otherwise
    */
-  getProjectById(id: number): Observable<any> {
+  getProjectById(id: number): Observable<Project | null> {
     try {
       if (!id || id < 0) {
         console.warn('Invalid project ID provided:', id);
@@ -65,7 +66,7 @@ export class ProjectService {
    * @param searchTerm - The term to search for in project titles and technologies
    * @returns Observable<any[]> Array of matching projects
    */
-  searchProjects(searchTerm: string): Observable<any[]> {
+  searchProjects(searchTerm: string): Observable<Project[]> {
     try {
       if (!searchTerm || searchTerm.trim().length === 0) {
         return this.getAllProducts();
@@ -90,7 +91,7 @@ export class ProjectService {
    * @param technology - The technology to filter by (e.g., 'ANGULAR', 'REACT')
    * @returns Observable<any[]> Array of projects using the specified technology
    */
-  getProjectsByTechnology(technology: string): Observable<any[]> {
+  getProjectsByTechnology(technology: string): Observable<Project[]> {
     try {
       if (!technology || technology.trim().length === 0) {
         return of([]);
@@ -119,9 +120,9 @@ export class ProjectService {
         if (!project) return false;
 
         // Basic validation checks
-        const hasTitle = project.title && project.title.trim().length > 0;
-        const hasImage = project.image && project.image.trim().length > 0;
-        const hasTechnologies = project.technologies && project.technologies.trim().length > 0;
+        const hasTitle = Boolean(project.title && project.title.trim().length > 0);
+        const hasImage = Boolean(project.image && project.image.trim().length > 0);
+        const hasTechnologies = Array.isArray(project.technologies) && project.technologies.length > 0;
 
         return hasTitle && hasImage && hasTechnologies;
       }),
@@ -150,7 +151,7 @@ export class ProjectService {
    * @param limit - Maximum number of featured projects to return (default: 6)
    * @returns Observable<any[]> Array of featured projects
    */
-  getFeaturedProjects(limit: number = 6): Observable<any[]> {
+  getFeaturedProjects(limit: number = 6): Observable<Project[]> {
     try {
       // For now, return first N projects as featured
       // In the future, you could add a 'featured' property to the project model

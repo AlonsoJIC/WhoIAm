@@ -7,7 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 export class ImageLoaderService {
   private loadedImages = new Set<string>();
   private loading = new BehaviorSubject<boolean>(false);
-  loading$ = this.loading.asObservable();
   private imageCategories: { [key: string]: string[] } = {};
 
   constructor() {
@@ -66,7 +65,4 @@ export class ImageLoaderService {
     }
   }
 
-  isImageLoaded(src: string): boolean {
-    return this.loadedImages.has(src);
-  }
 }

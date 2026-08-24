@@ -242,7 +242,6 @@ export class AppComponent implements OnInit {
         'assets/gpr1.webp',
         'assets/gpr2.webp',
         'assets/gpr3.webp',
-        'assets/gpr4.webp',
         'assets/lg1.webp',
         'assets/lg2.webp',
         'assets/lg3.webp',
@@ -299,13 +298,9 @@ export class AppComponent implements OnInit {
         'assets/nodeL.svg',
         'assets/gitL.svg',
         'assets/htmlL.svg',
-        'assets/cssL.svg',
         'assets/jsL.svg',
         'assets/angularL.svg',
-        'assets/reactL.svg',
-        'assets/heart.svg',
-        'assets/tauri.svg',
-        'assets/express.svg'
+        'assets/heart.svg'
       ];
 
       // Cargar imágenes críticas, secundarias e iconos adicionales inicialmente
