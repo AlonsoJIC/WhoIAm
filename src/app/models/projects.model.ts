@@ -413,5 +413,62 @@ export const PROJECTS: Project[] = [
     liveUrl: 'https://estebanbogantes.com/',
     clientName: 'Esteban Bogantes'
   },
+  {
+    id: 31,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'VV Phoenix Ops',
+    technologies: ['WordPress', 'CSS', 'PHP', 'Divi'],
+    simpleDescription: 'Full corporate website for a project management staffing and delivery support company.',
+    description: 'I built the complete corporate website for VV Phoenix Ops, creating a conversion-focused brand narrative around project staffing, PMO support, implementation leadership, and nearshore operations. The site includes service positioning, trust-building sections, contact flow, and a clean structure designed to communicate expertise and drive qualified consultations.',
+    liveUrl: 'https://vvphoenixops.com/',
+    clientName: 'VV Phoenix Ops'
+  },
+  {
+    id: 32,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Estrategika',
+    technologies: ['WordPress', 'CSS', 'PHP', 'Divi'],
+    simpleDescription: 'Full business consulting website focused on management, growth, and operational structure.',
+    description: 'I designed and developed the complete website for Estrategika, translating the consulting model into a clear and persuasive digital presence. The project covers the company positioning, service offer, methodology, credibility-building content, and calls to action aimed at business owners who need better governance, accountability, and execution.',
+    clientName: 'Estrategika'
+  },
+  {
+    id: 33,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'SM Consultora',
+    technologies: ['WordPress', 'CSS', 'PHP', 'Divi'],
+    simpleDescription: 'Strategic consulting website centered on public procurement readiness and business growth.',
+    description: 'I created the full website for SM Consultora, building a strong narrative around planning, financial structure, organizational readiness, and public bidding strategy. The site consolidates the service offer, value proposition, corporate positioning, and contact experience to help companies compete with more clarity and strength.',
+    clientName: 'SM Consultora'
+  },
+  {
+    id: 34,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'SYSTEC',
+    technologies: ['WordPress', 'CSS', 'JavaScript', 'IT Services'],
+    simpleDescription: 'Complete digital presence for an IT infrastructure and cybersecurity company serving SMEs.',
+    description: 'I developed the complete website for SYSTEC in close collaboration with the client to reflect their infrastructure, IT support, and cybersecurity services. The project included a full corporate presentation, service storytelling, credibility elements, and a communication structure designed for lead generation and trust-building with business clients.',
+    liveUrl: 'https://systec.cr/',
+    clientName: 'SYSTEC'
+  },
+  {
+    id: 35,
+    category: 'professional-client',
+    image: '/assets/placeholder.svg',
+    images: ['/assets/placeholder.svg'],
+    title: 'Constructora DIA S.A.',
+    technologies: ['WordPress', 'CSS', 'PHP', 'Divi'],
+    simpleDescription: 'Project portfolio and institutional website for a construction company in Costa Rica.',
+    description: 'I developed the projects section and supported the content architecture for Constructora DIA S.A., shaping a construction-focused portfolio that showcases residential, institutional, and commercial developments. The work included building a structured project showcase, improving information hierarchy, and creating a cleaner presentation for the company’s built work and credibility.',
+    clientName: 'Constructora DIA S.A.'
+  }
 
 ]
