@@ -1,34 +1,41 @@
 <div class="grad-bar sticky-top"></div>
-<nav class="navbar navbar-expand-lg sticky-top">
-
+<nav class="navbar sticky-top">
   <div class="container navbar-center">
-    <nav class="navbar-links p-2" aria-label="Main navigation">
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="home"
-        aria-label="Navigate to About Me section">
-        <span class="navbarSpan">About me.</span>
-      </a>
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="projects"
-        aria-label="Navigate to Projects section">
-        <span class="navbarSpan">Projects.</span>
-      </a>
-      <a routerLinkActive="active" class="btn" aria-current="page" routerLink="contact"
-        aria-label="Navigate to Contact section">
-        <span class="navbarSpan">Contact me.</span>
-      </a>
-    </nav>
-    <div class="navbar-social" aria-label="Social media links">
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/alonsojic/" target="_blank"
-        rel="noopener noreferrer" role="button" aria-label="Visit my LinkedIn profile">
-        <fa-icon [icon]="faLinkedin" aria-hidden="true"></fa-icon>
-      </a>
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/alonsojic/" target="_blank"
-        rel="noopener noreferrer" role="button" aria-label="Visit my Instagram profile">
-        <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
-      </a>
-      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AlonsoJIC" target="_blank"
-        rel="noopener noreferrer" role="button" aria-label="Visit my GitHub profile">
-        <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
-      </a>
+    <button class="navbar-toggle" type="button" aria-label="Toggle navigation" aria-expanded="{{ isMenuOpen }}"
+      (click)="toggleMenu()">
+      <span class="navbar-toggle__icon"></span>
+    </button>
+
+    <div class="navbar-panel" [class.is-open]="isMenuOpen">
+      <nav class="navbar-links p-2" aria-label="Main navigation">
+        <a routerLinkActive="active" class="btn" aria-current="page" routerLink="home" (click)="closeMenu()"
+          aria-label="Navigate to About Me section">
+          <span class="navbarSpan">About me.</span>
+        </a>
+        <a routerLinkActive="active" class="btn" aria-current="page" routerLink="projects" (click)="closeMenu()"
+          aria-label="Navigate to Projects section">
+          <span class="navbarSpan">Projects.</span>
+        </a>
+        <a routerLinkActive="active" class="btn" aria-current="page" routerLink="contact" (click)="closeMenu()"
+          aria-label="Navigate to Contact section">
+          <span class="navbarSpan">Contact me.</span>
+        </a>
+      </nav>
+
+      <div class="navbar-social" aria-label="Social media links">
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/alonsojic/" target="_blank"
+          rel="noopener noreferrer" role="button" aria-label="Visit my LinkedIn profile">
+          <fa-icon [icon]="faLinkedin" aria-hidden="true"></fa-icon>
+        </a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/alonsojic/" target="_blank"
+          rel="noopener noreferrer" role="button" aria-label="Visit my Instagram profile">
+          <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+        </a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AlonsoJIC" target="_blank"
+          rel="noopener noreferrer" role="button" aria-label="Visit my GitHub profile">
+          <fa-icon [icon]="faGithub" aria-hidden="true"></fa-icon>
+        </a>
+      </div>
     </div>
   </div>
 </nav>

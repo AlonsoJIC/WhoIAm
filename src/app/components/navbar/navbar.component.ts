@@ -12,4 +12,14 @@ export class NavbarComponent {
   faLinkedin = faLinkedin;
   faInstagram = faInstagram;
   faDiscord = faDiscord;
+
+  isMenuOpen = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

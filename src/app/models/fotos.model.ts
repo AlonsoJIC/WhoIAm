@@ -22,6 +22,31 @@ export const FOTOS: Foto[] = [
     category: 'languages'
   },
   {
+    name: 'C#',
+    image: '/assets/csharp.svg',
+    category: 'languages'
+  },
+  {
+    name: 'Java',
+    image: '/assets/java.svg',
+    category: 'languages'
+  },
+  {
+    name: 'Rust',
+    image: '/assets/rust.svg',
+    category: 'languages'
+  },
+  {
+    name: 'PHP',
+    image: '/assets/php.svg',
+    category: 'languages'
+  },
+  {
+    name: 'Python',
+    image: '/assets/python.svg',
+    category: 'languages'
+  },
+  {
     name: 'Angular',
     image: '/assets/angular.svg',
     category: 'frontend'
@@ -34,6 +59,31 @@ export const FOTOS: Foto[] = [
   {
     name: 'Astro',
     image: '/assets/astro.svg',
+    category: 'frontend'
+  },
+  {
+    name: 'Pug',
+    image: '/assets/pug.svg',
+    category: 'frontend'
+  },
+  {
+    name: 'GSAP',
+    image: '/assets/gsap.svg',
+    category: 'frontend'
+  },
+  {
+    name: 'Tailwind CSS',
+    image: '/assets/tailwind.svg',
+    category: 'frontend'
+  },
+  {
+    name: 'Bootstrap',
+    image: '/assets/bootstrap.svg',
+    category: 'frontend'
+  },
+  {
+    name: 'SASS',
+    image: '/assets/sass.svg',
     category: 'frontend'
   },
   {
@@ -57,93 +107,85 @@ export const FOTOS: Foto[] = [
     category: 'backend'
   },
   {
-    name: 'Git',
-    image: '/assets/git.svg',
-    category: 'tools'
-  },
-
-  {
-    name: 'C#',
-    image: '/assets/csharp.svg',
-    category: 'languages'
-  },
-  {
-    name: 'Java',
-    image: '/assets/java.svg',
-    category: 'languages'
-  },
-  {
-    name: 'Python',
+    name: 'FastAPI',
     image: '/assets/python.svg',
-    category: 'languages'
+    category: 'backend'
   },
   {
-    name: 'Rust',
-    image: '/assets/rust.svg',
-    category: 'languages'
+    name: 'JWT',
+    image: '/assets/jwt.svg',
+    category: 'backend'
   },
   {
-    name: 'Scrum',
-    image: '/assets/scrum.svg',
-    category: 'tools'
+    name: 'WordPress',
+    image: '/assets/wordpress.svg',
+    category: 'cms'
   },
   {
-    name: 'Atlassian',
-    image: '/assets/atlassian.svg',
-    category: 'tools'
-  },
-
-  {
-    name: 'Tailwind CSS',
-    image: '/assets/tailwind.svg',
-    category: 'frontend'
+    name: 'WooCommerce',
+    image: '/assets/wordpress.svg',
+    category: 'cms'
   },
   {
-    name: 'Bootstrap',
-    image: '/assets/bootstrap.svg',
-    category: 'frontend'
+    name: 'Divi',
+    image: '/assets/wordpress.svg',
+    category: 'cms'
   },
   {
-    name: 'SASS',
-    image: '/assets/sass.svg',
-    category: 'frontend'
+    name: 'Elementor',
+    image: '/assets/wordpress.svg',
+    category: 'cms'
   },
   {
-    name: 'Pug',
-    image: '/assets/pug.svg',
-    category: 'frontend'
+    name: 'ACF',
+    image: '/assets/wordpress.svg',
+    category: 'cms'
   },
   {
-    name: 'GSAP',
-    image: '/assets/gsap.svg',
-    category: 'frontend'
-  },
-
-
-  {
-    name: 'Firebase',
-    image: '/assets/firebase.svg',
-    category: 'infrastructure'
+    name: 'Shopify',
+    image: '/assets/shopify.svg',
+    category: 'cms'
   },
   {
     name: 'SQL databases',
     image: '/assets/databases.svg',
     category: 'infrastructure'
   },
-
   {
-    name: 'Oracle',
-    image: '/assets/oracle.svg',
+    name: 'Firebase',
+    image: '/assets/firebase.svg',
     category: 'infrastructure'
   },
-
   {
     name: 'Docker',
     image: '/assets/docker.svg',
     category: 'infrastructure'
   },
-
-
+  {
+    name: 'Oracle',
+    image: '/assets/oracle.svg',
+    category: 'infrastructure'
+  },
+  {
+    name: 'AWS',
+    image: '/assets/aws.svg',
+    category: 'infrastructure'
+  },
+  {
+    name: 'Git',
+    image: '/assets/git.svg',
+    category: 'tools'
+  },
+  {
+    name: 'GitHub',
+    image: '/assets/git.svg',
+    category: 'tools'
+  },
+  {
+    name: 'Scrum',
+    image: '/assets/scrum.svg',
+    category: 'tools'
+  },
   {
     name: 'Postman',
     image: '/assets/postman.svg',
@@ -154,30 +196,24 @@ export const FOTOS: Foto[] = [
     image: '/assets/insomnia.svg',
     category: 'tools'
   },
-
-  {
-    name: 'JWT',
-    image: '/assets/jwt.svg',
-    category: 'backend'
-  },
-  {
-    name: 'Shopify',
-    image: '/assets/shopify.svg',
-    category: 'cms'
-  },
-  {
-    name: 'WordPress',
-    image: '/assets/wordpress.svg',
-    category: 'cms'
-  },
-  {
-    name: 'Adobe XD',
-    image: '/assets/adobexd.svg',
-    category: 'tools'
-  },
   {
     name: 'Figma',
     image: '/assets/figma.svg',
+    category: 'tools'
+  },
+  {
+    name: 'SEO',
+    image: '/assets/wordpress.svg',
+    category: 'tools'
+  },
+  {
+    name: 'Web Scraping',
+    image: '/assets/databases.svg',
+    category: 'tools'
+  },
+  {
+    name: 'Atlassian',
+    image: '/assets/atlassian.svg',
     category: 'tools'
   },
   {
@@ -186,34 +222,10 @@ export const FOTOS: Foto[] = [
     category: 'tools'
   },
   {
-    name: 'AWS (learning)',
-    image: '/assets/aws.svg',
+    name: 'Adobe XD',
+    image: '/assets/adobexd.svg',
     category: 'tools'
-  },
-  {
-    name: 'PHP',
-    category: 'languages'
-  },
-  {
-    name: 'WooCommerce',
-    category: 'cms'
-  },
-  {
-    name: 'ACF',
-    category: 'cms'
-  },
-  {
-    name: 'Divi',
-    category: 'cms'
-  },
-  {
-    name: 'Web Scraping',
-    category: 'tools'
-  },
-  {
-    name: 'SEO',
-    category: 'tools'
-  },
+  }
 ]
 
 

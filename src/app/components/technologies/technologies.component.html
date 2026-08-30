@@ -2,16 +2,19 @@
   <div class="content-wrapper" id="techDiv">
     <div class="technologies">
       <span>Technical toolkit</span>
-      <p>Tools I use to build interfaces, services, content platforms, and reliable delivery workflows.</p>
+      <p>Web-focused development stack built around product delivery, client work, and scalable front-end
+        implementation.</p>
     </div>
 
     <div class="toolkit-panel">
       <div class="technology-group"
         *ngFor="let category of ['languages', 'frontend', 'backend', 'cms', 'infrastructure', 'tools']">
-        <h3>{{ category === 'languages' ? 'Languages' : category === 'frontend' ? 'Frontend' : category === 'backend' ?
-          'Backend' : category === 'cms' ? 'CMS & Web Platforms' : category === 'infrastructure' ? 'Data &
-          Infrastructure' : 'Tools & Practices' }}</h3>
-        <div class="technology-grid">
+        <h3>{{ category === 'languages' ? 'Core languages' : category === 'frontend' ? 'Frontend development' : category
+          === 'backend' ?
+          'Backend & APIs' : category === 'cms' ? 'CMS & business web platforms' : category === 'infrastructure' ? 'Data
+          &
+          delivery infrastructure' : 'Workflow, collaboration & extras' }}</h3>
+        <div class="technology-grid" [class.compact-row]="category === 'tools'">
           <div *ngFor="let foto of fotos" class="tech-item" [hidden]="foto.category !== category">
             <div class="tech-icon" [class.text-icon]="!foto.image">
               <img *ngIf="foto.image" [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="lazy">
