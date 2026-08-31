@@ -123,7 +123,7 @@ export const FOTOS: Foto[] = [
   },
   {
     name: 'WooCommerce',
-    image: '/assets/wordpress.svg',
+    image: '/assets/woocommerce.svg',
     category: 'cms'
   },
   {
@@ -133,7 +133,7 @@ export const FOTOS: Foto[] = [
   },
   {
     name: 'Elementor',
-    image: '/assets/wordpress.svg',
+    image: '/assets/elementor.svg',
     category: 'cms'
   },
   {
@@ -178,7 +178,7 @@ export const FOTOS: Foto[] = [
   },
   {
     name: 'GitHub',
-    image: '/assets/git.svg',
+    image: '/assets/github.svg',
     category: 'tools'
   },
   {
@@ -197,13 +197,18 @@ export const FOTOS: Foto[] = [
     category: 'tools'
   },
   {
+    name: 'Asana',
+    image: '/assets/asana.svg',
+    category: 'tools'
+  },
+  {
     name: 'Figma',
     image: '/assets/figma.svg',
     category: 'tools'
   },
   {
     name: 'SEO',
-    image: '/assets/wordpress.svg',
+    image: '/assets/seo.svg',
     category: 'tools'
   },
   {
