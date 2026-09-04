@@ -3,6 +3,7 @@ import { ErrorHandlerService } from './services/error-handler.service';
 import { SeoService } from './services/seo.service';
 import { SEO_CONFIG } from './config/seo.config';
 import { PROJECTS } from './models/projects.model';
+import { FOTOS } from './models/fotos.model';
 
 /**
  * Root component of the application
@@ -185,45 +186,13 @@ export class AppComponent implements OnInit {
         'assets/avatar.svg'
       ];
 
-      // Imágenes de tecnologías principales - Carga secundaria (prioridad alta)
-      const secondaryImages = [
-        'assets/html.svg',
-        'assets/css.svg',
-        'assets/js.svg',
-        'assets/ts.svg',
-        'assets/angular.svg',
-        'assets/react.svg',
-        'assets/node.svg',
-        'assets/git.svg',
-        'assets/bootstrap.svg',
-        'assets/sass.svg',
-        'assets/astro.svg',
-        'assets/spring.svg',
-        'assets/laravel.svg',
-        'assets/flask.svg',
-        'assets/csharp.svg',
-        'assets/java.svg',
-        'assets/python.svg',
-        'assets/rust.svg',
-        'assets/scrum.svg',
-        'assets/atlassian.svg',
-        'assets/tailwind.svg',
-        'assets/pug.svg',
-        'assets/gsap.svg',
-        'assets/firebase.svg',
-        'assets/databases.svg',
-        'assets/oracle.svg',
-        'assets/docker.svg',
-        'assets/postman.svg',
-        'assets/insomnia.svg',
-        'assets/jwt.svg',
-        'assets/shopify.svg',
-        'assets/wordpress.svg',
-        'assets/adobexd.svg',
-        'assets/figma.svg',
-        'assets/gwd.svg',
-        'assets/aws.svg'
-      ];
+      // Preload the technology icons used by the home page.
+      const secondaryImages = [...new Set(
+        FOTOS
+          .map(foto => foto.image)
+          .filter((image): image is string => Boolean(image))
+          .map(image => image.replace(/^\//, ''))
+      )];
 
       // Iconos adicionales y variaciones - Lazy loading (carga después)
       const additionalIcons = [
@@ -235,8 +204,8 @@ export class AppComponent implements OnInit {
         'assets/heart.svg'
       ];
 
-      // Only critical home assets block the first render. Other images load on demand.
-      const imagesToLoad = criticalImages;
+      // The home page needs its identity assets and technology toolkit ready before GSAP navigation starts.
+      const imagesToLoad = [...criticalImages, ...secondaryImages];
 
       // Registrar todas las imágenes en el ImageLoaderService
       const allImages = {

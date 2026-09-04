@@ -17,7 +17,8 @@
         <div class="technology-grid" [class.compact-row]="category === 'tools'">
           <div *ngFor="let foto of fotos" class="tech-item" [hidden]="foto.category !== category">
             <div class="tech-icon" [class.text-icon]="!foto.image">
-              <img *ngIf="foto.image" [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="lazy">
+              <img *ngIf="foto.image" [src]="foto.image" [alt]="foto.name + ' technology logo'" loading="eager"
+                decoding="async">
               <span *ngIf="!foto.image" aria-hidden="true">{{ foto.name.charAt(0) }}</span>
             </div>
             <p>{{ foto.name }}</p>
