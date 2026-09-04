@@ -1,102 +1,214 @@
-// Loading Screen Styles
 .loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #000000 0%, #71dffa 100%);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(178, 241, 250, 0.14), transparent 24rem),
+    linear-gradient(135deg, #030608 0%, #071317 58%, #0b252b 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99999; // Z-index muy alto para estar por encima de todo
+  z-index: 99999;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    opacity: 0.18;
+    background-image: linear-gradient(rgba(178, 241, 250, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(178, 241, 250, 0.08) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  }
+
+  &::after {
+    background: linear-gradient(90deg, transparent, rgba(178, 241, 250, 0.22), transparent);
+    width: 35%;
+    height: 1px;
+    top: 22%;
+    left: 32.5%;
+    animation: scan 4s ease-in-out infinite;
+  }
 }
 
 .loading-content {
+  position: relative;
+  z-index: 1;
   text-align: center;
   color: white;
-  max-width: 400px;
-  width: 90%;
+  max-width: 420px;
+  width: min(86%, 420px);
+  animation: loading-content-in 0.7s ease both;
 }
 
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid white;
+.loading-brand {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.loading-mark {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(178, 241, 250, 0.65);
   border-radius: 50%;
-  margin: 0 auto 2rem;
-  animation: spin 1s linear infinite;
+  color: #d9fbff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  box-shadow: 0 0 30px rgba(178, 241, 250, 0.18), inset 0 0 20px rgba(178, 241, 250, 0.08);
+}
+
+.loading-orbit {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(178, 241, 250, 0.2);
+  border-radius: 50%;
+  transform: rotate(-28deg);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #b2f1fa;
+    box-shadow: 0 0 12px #b2f1fa;
+  }
+}
+
+.loading-orbit--one {
+  animation: orbit 2.6s linear infinite;
+}
+
+.loading-orbit--two {
+  inset: 14px -4px;
+  transform: rotate(62deg);
+  opacity: 0.45;
+  animation: orbit-reverse 3.8s linear infinite;
+}
+
+.loading-kicker {
+  margin: 0 0 0.5rem;
+  color: #b2f1fa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .loading-text {
-  font-size: 1.5rem;
+  min-height: 2rem;
+  margin: 0 0 1.5rem;
+  color: #fff;
+  font-size: 1.45rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  animation: pulse 2s ease-in-out infinite;
-  min-height: 2rem; // Para evitar saltos cuando cambia el texto
+  letter-spacing: 0;
 }
 
 .progress-container {
-  margin-bottom: 1rem;
+  margin: 0 auto 1.25rem;
 }
 
-.progress-bar {
+.progress-track {
   width: 100%;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  height: 4px;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(178, 241, 250, 0.06);
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ffffff, #e0e0e0);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  min-width: 4px;
+  background: linear-gradient(90deg, #6dd5ed, #d9fbff);
+  border-radius: inherit;
+  transition: width 0.35s ease;
+  box-shadow: 0 0 14px rgba(178, 241, 250, 0.75);
 }
 
-.progress-percentage {
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.9;
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .loading-subtitle {
-  font-size: 1rem;
-  opacity: 0.8;
   margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
 }
 
+@keyframes loading-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
 
-
-// Animations
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+@keyframes orbit {
+  from { transform: rotate(-28deg); }
+  to { transform: rotate(332deg); }
 }
 
-// Responsive
+@keyframes orbit-reverse {
+  from { transform: rotate(62deg); }
+  to { transform: rotate(-298deg); }
+}
+
+@keyframes scan {
+  0%, 100% { opacity: 0; transform: translateX(-20%); }
+  50% { opacity: 1; transform: translateX(20%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-content,
+  .loading-orbit,
+  .loading-screen::after {
+    animation: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .loading-content {
+    width: 82%;
+  }
+
   .loading-text {
     font-size: 1.2rem;
   }
-  
+
   .loading-subtitle {
-    font-size: 0.9rem;
-  }
-  
-  .loading-content {
-    width: 95%;
+    font-size: 0.75rem;
   }
 }

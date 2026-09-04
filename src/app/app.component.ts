@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ErrorHandlerService } from './services/error-handler.service';
 import { SeoService } from './services/seo.service';
 import { SEO_CONFIG } from './config/seo.config';
+import { PROJECTS } from './models/projects.model';
 
 /**
  * Root component of the application
@@ -70,10 +71,7 @@ export class AppComponent implements OnInit {
       await this.initializeComponents();
 
       this.updateLoadingStatus('Almost ready...', 90);
-      await this.delay(500);
-
       this.updateLoadingStatus('Ready!', 100);
-      await this.delay(500);
 
       this.isLoading = false;
       this.hasLoadingError = false;
@@ -168,8 +166,8 @@ export class AppComponent implements OnInit {
           reject(error);
         });
       } else {
-        // Fallback for browsers without font loading API
-        setTimeout(resolve, 500);
+        // Continue immediately in browsers without the Font Loading API.
+        resolve();
       }
     });
   }
@@ -227,72 +225,6 @@ export class AppComponent implements OnInit {
         'assets/aws.svg'
       ];
 
-      // Imágenes de proyectos - Lazy loading
-      const projectImages = [
-        'assets/guess.webp',
-        'assets/cg1.webp',
-        'assets/cg2.webp',
-        'assets/cg3.webp',
-        'assets/cg4.webp',
-        'assets/cg5.webp',
-        'assets/gp1.webp',
-        'assets/gp2.webp',
-        'assets/gp3.webp',
-        'assets/gp4.webp',
-        'assets/gpr1.webp',
-        'assets/gpr2.webp',
-        'assets/gpr3.webp',
-        'assets/lg1.webp',
-        'assets/lg2.webp',
-        'assets/lg3.webp',
-        'assets/lg4.webp',
-        'assets/lg5.webp',
-        'assets/tre1.webp',
-        'assets/tre2.webp',
-        'assets/tre3.webp',
-        'assets/tre4.webp',
-        'assets/tre5.webp',
-        'assets/emp1.webp',
-        'assets/emp2.webp',
-        'assets/emp3.webp',
-        'assets/emp4.webp',
-        'assets/Tesla1.webp',
-        'assets/Tesla2.webp',
-        'assets/Tesla3.webp',
-        'assets/Tesla4.webp',
-        'assets/P2-1.webp',
-        'assets/P2-2.webp',
-        'assets/P2-3.webp',
-        'assets/P2-4.webp',
-        'assets/P2-5.webp',
-        'assets/P3-1.webp',
-        'assets/P3-2.webp',
-        'assets/P3-3.webp',
-        'assets/P3-4.webp',
-        'assets/P3-5.webp',
-        'assets/td1.webp',
-        'assets/td2.webp',
-        'assets/td3.webp',
-        'assets/td4.webp',
-        'assets/td5.webp',
-        'assets/lb0.webp',
-        'assets/lb1.webp',
-        'assets/lb2.webp',
-        'assets/lb3.webp',
-        'assets/lbdb.webp',
-        'assets/qg1.webp',
-        'assets/ja1.webp',
-        'assets/ja2.webp',
-        'assets/ja3.webp',
-        'assets/tcd0.webp',
-        'assets/tcd1.webp',
-        'assets/tcd2.webp',
-        'assets/tcd3.webp',
-        'assets/ss1.webp',
-        'assets/ss2.webp',
-        'assets/ss3.webp'
-      ];
-
       // Iconos adicionales y variaciones - Lazy loading (carga después)
       const additionalIcons = [
         'assets/nodeL.svg',
@@ -303,14 +235,14 @@ export class AppComponent implements OnInit {
         'assets/heart.svg'
       ];
 
-      // Cargar imágenes críticas, secundarias e iconos adicionales inicialmente
-      const imagesToLoad = [...criticalImages, ...secondaryImages, ...additionalIcons];
+      // Only critical home assets block the first render. Other images load on demand.
+      const imagesToLoad = criticalImages;
 
       // Registrar todas las imágenes en el ImageLoaderService
       const allImages = {
         critical: criticalImages,
         secondary: secondaryImages,
-        projects: projectImages,
+        projects: PROJECTS.flatMap(project => [project.image, ...(project.images || [])]),
         icons: additionalIcons
       };
 
@@ -388,10 +320,7 @@ export class AppComponent implements OnInit {
   private initializeComponents(): Promise<void> {
     return new Promise((resolve, reject) => {
       try {
-        // Simulate component initialization
-        setTimeout(() => {
-          resolve();
-        }, 800);
+        resolve();
       } catch (error) {
         reject(error);
       }

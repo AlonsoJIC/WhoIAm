@@ -1,33 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
-
-
-
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    loadChildren: () => import('./pages/home/home.module').then(module => module.HomeModule)
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    loadChildren: () => import('./pages/projects/projects.module').then(module => module.ProjectsModule)
   },
   {
     path: 'contact',
-    component: ContactComponent
+    loadChildren: () => import('./pages/contact/contact.module').then(module => module.ContactModule)
   },
   {
     path: 'not-found',
-    component: NotFoundComponent
+    loadChildren: () => import('./pages/not-found/not-found.module').then(module => module.NotFoundModule)
   },
   {
     path: 'projects/:id',
-    component: ProjectDetailComponent
+    loadChildren: () => import('./pages/project-detail/project-detail.module').then(module => module.ProjectDetailModule)
   },
   {
     path: '',
@@ -38,7 +30,7 @@ const routes: Routes = [
   //RENDERIZA LA PAGE NOTFOUND.... SIEMPRE VA DE ULTIMO PORQUE INTERFIERE!....
   {
     path: '**',
-    component: NotFoundComponent
+    loadChildren: () => import('./pages/not-found/not-found.module').then(module => module.NotFoundModule)
   },
 ];
 

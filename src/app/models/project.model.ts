@@ -6,6 +6,9 @@ export interface Project {
   title: string;
   simpleDescription: string;
   description: string;
+  problem: string;
+  solution: string;
+  result: string;
   technologies: string[];
   image: string;
   images?: string[];

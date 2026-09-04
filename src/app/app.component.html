@@ -1,15 +1,24 @@
 <!-- Loading Screen -->
 <div *ngIf="isLoading" class="loading-screen">
   <div class="loading-content">
-    <div class="spinner"></div>
-    <h2 class="loading-text">{{loadingText}}</h2>
-    <div class="progress-container">
-      <div class="progress-bar">
+    <div class="loading-brand" aria-hidden="true">
+      <span class="loading-mark">AJ</span>
+      <span class="loading-orbit loading-orbit--one"></span>
+      <span class="loading-orbit loading-orbit--two"></span>
+    </div>
+    <p class="loading-kicker">Alonso Jiménez</p>
+    <h2 class="loading-text" aria-live="polite">{{loadingText}}</h2>
+    <div class="progress-container" role="progressbar" [attr.aria-valuenow]="loadingProgress" aria-valuemin="0"
+      aria-valuemax="100" aria-label="Loading portfolio">
+      <div class="progress-track">
         <div class="progress-fill" [style.width.%]="loadingProgress"></div>
       </div>
-      <span class="progress-percentage">{{loadingProgress}}%</span>
+      <div class="progress-meta">
+        <span>Portfolio</span>
+        <span>{{loadingProgress}}%</span>
+      </div>
     </div>
-    <p class="loading-subtitle">Preparing the web for the best experience...</p>
+    <p class="loading-subtitle">Systems Engineer &amp; Full Stack Developer</p>
   </div>
 </div>
 

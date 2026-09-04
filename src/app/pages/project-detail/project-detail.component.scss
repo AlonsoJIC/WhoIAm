@@ -243,6 +243,56 @@ $shadows-big: multiple-box-shadow(80);
 }
 
 /* INFO SECTION */
+.technologies-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+
+    svg {
+      color: #b2f1fa;
+    }
+  }
+
+  .tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .tech-badge {
+      display: inline-block;
+      padding: 0.45rem 0.9rem;
+      background: linear-gradient(135deg, rgba(178, 241, 250, 0.15), rgba(178, 241, 250, 0.05));
+      border: 1px solid rgba(178, 241, 250, 0.3);
+      border-radius: 20px;
+      color: #b2f1fa;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(135deg, rgba(178, 241, 250, 0.25), rgba(178, 241, 250, 0.15));
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(178, 241, 250, 0.2);
+      }
+    }
+  }
+}
+
 .info-section {
   position: relative;
   z-index: 1;
@@ -274,30 +324,6 @@ $shadows-big: multiple-box-shadow(80);
 
       svg {
         color: #b2f1fa;
-      }
-    }
-
-    .tech-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-
-      .tech-badge {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background: linear-gradient(135deg, rgba(178, 241, 250, 0.15), rgba(178, 241, 250, 0.05));
-        border: 1px solid rgba(178, 241, 250, 0.3);
-        border-radius: 20px;
-        color: #b2f1fa;
-        font-size: 0.85rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: linear-gradient(135deg, rgba(178, 241, 250, 0.25), rgba(178, 241, 250, 0.15));
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(178, 241, 250, 0.2);
-        }
       }
     }
 
@@ -508,7 +534,7 @@ $shadows-big: multiple-box-shadow(80);
       font-size: 1.1rem;
     }
 
-    .tech-badges .tech-badge {
+    .technologies-section .tech-badges .tech-badge {
       font-size: 0.8rem;
       padding: 0.4rem 0.8rem;
     }
