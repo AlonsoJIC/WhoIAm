@@ -35,6 +35,34 @@ $bg-gradient: linear-gradient(
  text-transform: uppercase;
 }
 
+@mixin homeSectionTitle {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: bolder;
+ font-size: 300%;
+ letter-spacing: -5px;
+ line-height: 0.75em;
+ text-transform: uppercase;
+ background: linear-gradient(-45deg, #d1f9f9, #e4fdfd, #ffffff);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ animation: slideInLeft;
+ animation-duration: 2.5s;
+
+ @media only screen and (max-width: 991.98px) {
+  font-size: 1.9rem;
+ }
+
+ @media only screen and (min-width: 992px) and (max-width: 1399px),
+   only screen and (max-height: 850px) {
+  font-size: 2.35rem;
+ }
+
+ @media only screen and (max-width: 600px) {
+  font-size: 2rem;
+ }
+}
+
 @mixin normalText($valor){
  font-family: 'Anton', sans-serif;
  font-size: $valor;

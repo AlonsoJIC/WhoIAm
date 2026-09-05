@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "sass:string";
+@use "../../../variables.scss" as *;
 
 // n is number of stars required
 @function multiple-box-shadow ($n) {
@@ -85,7 +86,8 @@ $shadows-big: multiple-box-shadow(80);
 
 .contact-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+  background: linear-gradient(100deg, #000000 30%, #1a1a2e 100%);
+  
 }
 
 #contactSection {
@@ -105,16 +107,8 @@ $shadows-big: multiple-box-shadow(80);
   }
   
   h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-weight: bolder;
-    letter-spacing: -4px;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    background: linear-gradient(-45deg, #d1f9f9, #e4fdfd, #ffffff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
+    @include homeSectionTitle;
   }
 
   .lead {
@@ -339,11 +333,6 @@ $shadows-big: multiple-box-shadow(80);
 @media (max-width: 991px) {
   #contactSection {
     padding: 50px 20px;
-    
-    h1 {
-      font-size: 2.5rem;
-      letter-spacing: -0.01em;
-    }
 
     .lead {
       font-size: 1.1rem;
@@ -391,12 +380,6 @@ $shadows-big: multiple-box-shadow(80);
   #contactSection {
     padding: 40px 15px;
     min-height: auto;
-    
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
 
     .lead {
       font-size: 1rem;
@@ -482,11 +465,6 @@ $shadows-big: multiple-box-shadow(80);
 @media (max-width: 576px) {
   #contactSection {
     padding: 30px 10px;
-    
-    h1 {
-      font-size: 1.75rem;
-      letter-spacing: 0;
-    }
 
     .lead {
       font-size: 0.95rem;
